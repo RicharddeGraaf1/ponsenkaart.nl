@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ponsenkaart.nl — voortgang Omgevingsplan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#/">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="2" fill="none" stroke="#1a1a17" stroke-width="1.5"/>
+      <circle cx="8" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="24" cy="8" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="16" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="16" r="1.6" fill="#D4A017"/>
+      <circle cx="24" cy="16" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="24" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="24" r="1.6" fill="#B8B2A8"/>
+      <circle cx="24" cy="24" r="1.6" fill="#B8B2A8"/>
+    </svg>
+    <span class="brand-name">Ponsenkaart<span class="brand-tld">.nl</span></span>
+    <span class="brand-tag">voortgang omgevingsplan</span>
+  </a>
+
+  <div class="data-meta">
+    <span class="meta-dot" aria-hidden="true"></span>
+    <span class="meta-label">Data bijgewerkt</span>
+    <span class="meta-value" id="lastUpdate">18 mei 2026</span>
+    <span class="meta-sep">·</span>
+    <span class="meta-label">Bron</span>
+    <span class="meta-value">DSO / Kadaster</span>
+  </div>
+
+  <div class="search">
+    <svg viewBox="0 0 20 20" aria-hidden="true" class="search-icon">
+      <circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M13.5 13.5 L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <input id="search" type="text" placeholder="Zoek gemeente of postcode…" autocomplete="off">
+    <div class="search-results" id="searchResults" hidden></div>
+  </div>
+</header>
+
+<section class="kpis" id="kpis">
+  <div class="kpi">
+    <div class="kpi-label">Oppervlakte NL geponst</div>
+    <div class="kpi-value"><span id="kpiPct">0.0</span><span class="kpi-unit">%</span></div>
+    <div class="kpi-foot">
+      <span class="delta up" id="kpiPctDelta">+0,00 pp</span>
+      <span class="kpi-foot-note">t.o.v. vorige maand</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Gemeenten gestart</div>
+    <div class="kpi-value"><span id="kpiStarted">0</span><span class="kpi-unit">/ 342</span></div>
+    <div class="kpi-foot">
+      <div class="bar"><div class="bar-fill bar-fill-yellow" id="kpiStartedBar"></div></div>
+      <span class="kpi-foot-note" id="kpiStartedPct">0%</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Gemeenten klaar</div>
+    <div class="kpi-value"><span id="kpiDone">0</span><span class="kpi-unit">/ 342</span></div>
+    <div class="kpi-foot">
+      <div class="bar"><div class="bar-fill bar-fill-green" id="kpiDoneBar"></div></div>
+      <span class="kpi-foot-note" id="kpiDonePct">0%</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Resterend tot 1 jan 2032</div>
+    <div class="kpi-value kpi-countdown">
+      <span id="kpiYears">0</span><span class="kpi-unit">jr</span>
+      <span id="kpiMonths">0</span><span class="kpi-unit">mnd</span>
+    </div>
+    <div class="kpi-foot">
+      <div class="bar"><div class="bar-fill bar-fill-time" id="kpiTimeBar"></div></div>
+      <span class="kpi-foot-note" id="kpiTimePct">0% van transitieperiode verstreken</span>
+    </div>
+  </div>
+</section>
+
+<main class="layout">
+  <section class="map-region">
+    <div id="map"></div>
+
+    <div class="map-overlay map-toggle" role="tablist" aria-label="Kaart-weergave">
+      <button class="seg active" data-mode="pct" role="tab" aria-selected="true">Choropleth %</button>
+      <button class="seg" data-mode="abs" role="tab" aria-selected="false">Absoluut opp.</button>
+      <button class="seg" data-mode="cnt" role="tab" aria-selected="false">Aantal ponsen</button>
+      <button class="seg" data-mode="pons" role="tab" aria-selected="false">Pons-polygonen</button>
+    </div>
+
+    <div class="map-overlay legend">
+      <div class="legend-title" id="legendTitle">% van gemeente geponst</div>
+      <div class="legend-bar" id="legendBar"></div>
+      <div class="legend-scale" id="legendScale">
+        <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+      </div>
+      <div class="legend-extra">
+        <span class="sw sw-gray"></span> nog niet gestart
+      </div>
+    </div>
+
+    <div class="map-overlay tooltip" id="tooltip" hidden>
+      <div class="tt-name" id="ttName">—</div>
+      <div class="tt-row"><span>% geponst</span><b id="ttPct">—</b></div>
+      <div class="tt-row"><span>Δ vorige mnd</span><b id="ttDelta">—</b></div>
+      <div class="tt-row"><span>Ponsen</span><b id="ttCount">—</b></div>
+    </div>
+
+    <div class="map-overlay leaderboard" id="leaderboard">
+      <header class="lb-head">
+        <button class="lb-toggle" id="lbToggle" aria-expanded="true">
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span class="lb-title">Leaderboard</span>
+        <div class="lb-tabs">
+          <button class="lb-tab active" data-lb="top">Top 10</button>
+          <button class="lb-tab" data-lb="bot">Achterblijvers</button>
+        </div>
+      </header>
+      <ol class="lb-list" id="lbList"></ol>
+    </div>
+
+    <div class="map-status" id="mapStatus">Kaart laden…</div>
+  </section>
+
+  <aside class="panel" id="panel">
+    <!-- filled by JS -->
+  </aside>
+</main>
+
+<script>
+  // OCD-API configuratie. Productie overschrijft dit met de echte
+  // hostname (zie deploy-instructies); lokaal dev draait OCD-API op :8001.
+  window.OCD_API_BASE = window.OCD_API_BASE || 'http://localhost:8001';
+  window.OCD_API_KEY  = window.OCD_API_KEY  || '';
+</script>
+<script src="data.js"></script>
+<script src="map.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
