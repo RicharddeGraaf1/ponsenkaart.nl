@@ -13,6 +13,20 @@
   const NL_FORMAT = new Intl.NumberFormat('nl-NL');
   const NL_FORMAT_1 = new Intl.NumberFormat('nl-NL', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const NL_FORMAT_2 = new Intl.NumberFormat('nl-NL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const NL_FORMAT_3 = new Intl.NumberFormat('nl-NL', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+
+  // Adaptive precision: ≥1% → 1 decimaal, ≥0,1% → 2 decimalen, daaronder
+  // 3 decimalen. Voorkomt dat een gemeente met een postzegel-pons als
+  // "0,0%" verschijnt en niet te onderscheiden is van "echt 0".
+  function formatPctNum(pct) {
+    if (!pct || pct <= 0) return '0';
+    if (pct >= 1) return NL_FORMAT_1.format(pct);
+    if (pct >= 0.1) return NL_FORMAT_2.format(pct);
+    return NL_FORMAT_3.format(pct);
+  }
+  function formatPct(pct) {
+    return formatPctNum(pct) + '%';
+  }
   const NL_DATE_LONG = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
   const NL_MONTH_YEAR_SHORT = new Intl.DateTimeFormat('nl-NL', { month: 'short', year: 'numeric' });
 
@@ -317,7 +331,7 @@
       li.innerHTML =
         `<span class="lb-rank">${String(i + 1).padStart(2, '0')}</span>` +
         `<span class="lb-name">${escapeHtml(f.properties.name)}</span>` +
-        `<span class="lb-pct"><span class="lb-pct-dot" style="background:${colorForPct(pct)}"></span>${NL_FORMAT_1.format(pct)}%</span>`;
+        `<span class="lb-pct"><span class="lb-pct-dot" style="background:${colorForPct(pct)}"></span>${formatPct(pct)}</span>`;
       li.addEventListener('click', () => selectGemeente(f.properties.name, { zoom: true }));
       list.appendChild(li);
     });
@@ -391,7 +405,7 @@
     const tt = document.getElementById('tooltip');
     const pct = f.properties.pct;
     document.getElementById('ttName').textContent = f.properties.name;
-    document.getElementById('ttPct').textContent = NL_FORMAT_1.format(pct) + '%';
+    document.getElementById('ttPct').textContent = formatPct(pct);
     const d = f.properties.delta;
     document.getElementById('ttDelta').textContent =
       (d > 0 ? '+' : '') + NL_FORMAT_2.format(d) + ' pp';
@@ -457,7 +471,7 @@
       </div>
       <div class="panel-body">
         <div class="headline-stat">
-          <span class="hs-value">${NL_FORMAT_1.format(a.pct)}</span>
+          <span class="hs-value">${formatPctNum(a.pct)}</span>
           <span class="hs-unit">% geponst</span>
           <span class="delta ${deltaCls} hs-delta">${(a.delta >= 0 ? '+' : '')}${NL_FORMAT_2.format(a.delta)} pp</span>
         </div>
@@ -492,7 +506,7 @@
               <div class="prov-row">
                 <span class="prov-name">${escapeHtml(p.name)}</span>
                 <div class="prov-bar"><div class="prov-bar-fill" style="width:${Math.max(1, p.pct)}%; background:${colorForPct(p.pct)}"></div></div>
-                <span class="prov-pct">${NL_FORMAT_1.format(p.pct)}%</span>
+                <span class="prov-pct">${formatPct(p.pct)}</span>
               </div>
             `).join('')}
           </div>
@@ -600,7 +614,7 @@
       </div>
       <div class="panel-body">
         <div class="headline-stat">
-          <span class="hs-value">${NL_FORMAT_1.format(pct)}</span>
+          <span class="hs-value">${formatPctNum(pct)}</span>
           <span class="hs-unit">% geponst</span>
           <span class="delta ${deltaCls} hs-delta">${(delta >= 0 ? '+' : '')}${NL_FORMAT_2.format(delta)} pp</span>
         </div>
@@ -753,7 +767,7 @@
         <div class="search-result${i === 0 ? ' active' : ''}" data-name="${escapeAttr(f.properties.name)}">
           <span class="sr-name">${highlight(f.properties.name, q)}</span>
           <span class="sr-prov">${escapeHtml(f.properties.province)}</span>
-          <span class="sr-pct">${NL_FORMAT_1.format(f.properties.pct)}%</span>
+          <span class="sr-pct">${formatPct(f.properties.pct)}</span>
         </div>
       `).join('');
       activeIdx = 0;
