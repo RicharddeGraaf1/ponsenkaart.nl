@@ -456,7 +456,8 @@ a { color: inherit; text-decoration: none; }
   list-style: none; margin: 0; padding: 4px 0;
   overflow-y: auto;
   font-size: 12px;
-  max-height: 320px;
+  flex: 1;
+  min-height: 0;
 }
 .lb-row {
   display: grid;

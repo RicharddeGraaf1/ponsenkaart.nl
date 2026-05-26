@@ -314,13 +314,15 @@
   }
 
   function renderLeaderboard(mode) {
-    const sorted = [...state.features]
-      .filter(f => f.properties.started)
-      .sort((a, b) => mode === 'top'
-        ? b.properties.pct - a.properties.pct
-        : a.properties.pct - b.properties.pct
-      )
-      .slice(0, 10);
+    // 'top'  → alleen gestarte gemeenten, hoogste % eerst, max 10 (klassieke leaderboard)
+    // 'all'  → alle 342 gemeenten, hoogste % eerst, scrollbaar (zoeken naar specifieke gemeente)
+    const sorted = mode === 'top'
+      ? [...state.features]
+          .filter(f => f.properties.started)
+          .sort((a, b) => b.properties.pct - a.properties.pct)
+          .slice(0, 10)
+      : [...state.features]
+          .sort((a, b) => b.properties.pct - a.properties.pct);
     const list = document.getElementById('lbList');
     list.innerHTML = '';
     sorted.forEach((f, i) => {
