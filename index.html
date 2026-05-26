@@ -149,14 +149,14 @@
 </main>
 
 <script>
-  // OCD-API configuratie. Lokaal dev wijst naar localhost; productie
-  // naar api.ponsenkaart.nl. De localhost-fallback alleen op localhost
-  // gebruiken voorkomt browser-PNA-prompts ("toegang tot apps en
-  // services op apparaat") als de site publiek geserveerd wordt.
+  // OCD-API configuratie. Lokaal dev praat direct met de OCD-API op
+  // localhost; productie gaat via /api (Cloudflare Pages Function proxy)
+  // zodat de API-key server-side blijft en Cloudflare's edge-cache + WAF
+  // + DDoS-bescherming in het pad zit.
   window.OCD_API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
     ? 'http://localhost:8002'
-    : 'https://ocd-api-production.up.railway.app';  // TODO: switch back to api.ponsenkaart.nl once Railway SSL cert issued
-  window.OCD_API_KEY = '9gOKgYz4NIx18owokmzCE/LvygQnrRFp';  // OCD PUBLIC rate-limit key; bij misbruik invalideren in Railway
+    : '/api';
+  window.OCD_API_KEY = '';  // staat server-side in de Pages Function env-var (OCD_API_KEY_PUBLIC)
 </script>
 <script src="data.js"></script>
 <script src="map.js"></script>
