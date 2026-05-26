@@ -11,7 +11,7 @@
 const UPSTREAM = 'https://ocd-api-production.up.railway.app';
 const ALLOWED_PREFIXES = ['/v1/ponsenkaart/', '/health'];
 
-export async function onRequest({ request, env, params }) {
+export async function onRequest({ request, env, params, waitUntil }) {
   // params.catchall is array van path-segmenten (bv. ['v1','ponsenkaart','stats'])
   const segments = Array.isArray(params.catchall) ? params.catchall : [params.catchall];
   const upstreamPath = '/' + segments.join('/');
@@ -23,6 +23,21 @@ export async function onRequest({ request, env, params }) {
     return new Response('Not Found', { status: 404 });
   }
 
+  // Top-level edge-cache: bij hit slaat Cloudflare deze Function helemaal
+  // over en serveert direct van edge. Beschermt de Function-invocation-
+  // quota onder DDoS én ontlast Railway.
+  const cache = caches.default;
+  const cacheKey = new Request(request.url, { method: 'GET' });
+
+  if (request.method === 'GET') {
+    const cached = await cache.match(cacheKey);
+    if (cached) {
+      const h = new Headers(cached.headers);
+      h.set('x-cache', 'HIT');
+      return new Response(cached.body, { status: cached.status, headers: h });
+    }
+  }
+
   const url = new URL(request.url);
   const upstreamUrl = UPSTREAM + upstreamPath + url.search;
 
@@ -31,7 +46,20 @@ export async function onRequest({ request, env, params }) {
   upstreamReq.headers.delete('host');
   upstreamReq.headers.delete('cookie');
 
-  // Cloudflare cachet automatisch op basis van Cache-Control headers
-  // die de OCD-API meestuurt (s-maxage=86400 voor ponsenkaart-endpoints).
-  return fetch(upstreamReq);
+  // Subrequest-cache: zelfs bij Function-miss laat dit Cloudflare de
+  // upstream-respons cachen, zodat Railway alleen bij echte cache-miss
+  // wordt aangesproken.
+  const response = await fetch(upstreamReq, {
+    cf: { cacheTtl: 86400, cacheEverything: true },
+  });
+
+  // Top-level cache vullen voor volgende GETs (alleen succes-responses).
+  if (request.method === 'GET' && response.ok) {
+    const respToCache = response.clone();
+    waitUntil(cache.put(cacheKey, respToCache));
+  }
+
+  const h = new Headers(response.headers);
+  h.set('x-cache', 'MISS');
+  return new Response(response.body, { status: response.status, headers: h });
 }
