@@ -141,10 +141,14 @@
 </main>
 
 <script>
-  // OCD-API configuratie. Productie overschrijft dit met de echte
-  // hostname (zie deploy-instructies); lokaal dev draait OCD-API op :8001.
-  window.OCD_API_BASE = window.OCD_API_BASE || 'http://localhost:8001';
-  window.OCD_API_KEY  = window.OCD_API_KEY  || '';
+  // OCD-API configuratie. Lokaal dev wijst naar localhost; productie
+  // naar api.ponsenkaart.nl. De localhost-fallback alleen op localhost
+  // gebruiken voorkomt browser-PNA-prompts ("toegang tot apps en
+  // services op apparaat") als de site publiek geserveerd wordt.
+  window.OCD_API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://localhost:8002'
+    : 'https://api.ponsenkaart.nl';
+  window.OCD_API_KEY = '';  // vul met PUBLIC key zodra Railway-deploy klaar is
 </script>
 <script src="data.js"></script>
 <script src="map.js"></script>
