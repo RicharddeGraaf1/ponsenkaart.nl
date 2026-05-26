@@ -26,7 +26,17 @@
       <circle cx="24" cy="24" r="1.6" fill="#B8B2A8"/>
     </svg>
     <span class="brand-name">Ponsenkaart<span class="brand-tld">.nl</span></span>
-    <span class="brand-tag">voortgang omgevingsplan</span>
+    <span class="brand-tag">vroeger hadden we ponskaarten, nu is hier de ponsenkaart</span>
+    <span class="brand-info" tabindex="0" aria-label="Uitleg ponsen" onclick="event.preventDefault();event.stopPropagation();">
+      <svg class="brand-info-icon" viewBox="0 0 16 16" aria-hidden="true">
+        <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="8" cy="4.6" r="0.95" fill="currentColor"/>
+        <path d="M8 7.2 L8 11.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-info-text" role="tooltip">
+        De pons is een object uit het Informatiemodel Omgevingswet dat weergeeft op welke plekken bestemmingsplannen juridisch niet meer geldig zijn. Deze webpagina geeft een beeld van de voortgang doordat alle ponsen getoond worden. Overigens geeft dit niet weer als een gemeente alle bestemmingsplannen uit zijn IMRO-manifest heeft gehaald. In dat geval is de gemeente klaar.
+      </span>
+    </span>
   </a>
 
   <div class="data-meta">
@@ -94,10 +104,8 @@
     <div id="map"></div>
 
     <div class="map-overlay map-toggle" role="tablist" aria-label="Kaart-weergave">
-      <button class="seg active" data-mode="pct" role="tab" aria-selected="true">Choropleth %</button>
-      <button class="seg" data-mode="abs" role="tab" aria-selected="false">Absoluut opp.</button>
-      <button class="seg" data-mode="cnt" role="tab" aria-selected="false">Aantal ponsen</button>
-      <button class="seg" data-mode="pons" role="tab" aria-selected="false">Pons-polygonen</button>
+      <button class="seg active" data-mode="pons" role="tab" aria-selected="true">Pons-polygonen</button>
+      <button class="seg" data-mode="pct" role="tab" aria-selected="false">Oppervlakte %</button>
     </div>
 
     <div class="map-overlay legend">

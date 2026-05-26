@@ -34,7 +34,7 @@
     provinces: [],
     selected: null,
     hover: null,
-    mode: 'pct', // pct | abs | cnt | pons
+    mode: 'pons', // pons | pct
     map: null,
     valById: new Map(),
     ponsPolygons: [],         // alle pons-features uit OCD-API
@@ -486,14 +486,6 @@
         </div>
 
         <div>
-          <div class="section-head">
-            <span>Voortgang 2024 → 2032</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--ink-faint)">grijs = projectie</span>
-          </div>
-          <div class="chart">${sparkSvg}</div>
-        </div>
-
-        <div>
           <div class="section-head"><span>Per provincie</span><span style="font-family:var(--mono);font-size:10px;color:var(--ink-faint)">% geponst</span></div>
           <div class="prov-list">
             ${state.provinces.map(p => `
@@ -635,15 +627,6 @@
             <div class="sc-sub">${eta === 'na deadline' ? 'op koers? nee' : 'lineaire extrapolatie'}</div>
           </div>
         </div>
-
-        ${sparkSvg ? `
-        <div>
-          <div class="section-head">
-            <span>Voortgang 2024 → 2032</span>
-            <span style="font-family:var(--mono);font-size:10px;color:var(--ink-faint)">grijs = projectie</span>
-          </div>
-          <div class="chart">${sparkSvg}</div>
-        </div>` : ''}
 
         ${punchListHtml}
 
