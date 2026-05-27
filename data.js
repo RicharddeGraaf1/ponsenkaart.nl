@@ -52,61 +52,9 @@
       absKm2: absKm2,
       started: (p.pons_count || 0) > 0,
       done: pct >= 95,
-      // Pons-datum onbekend (G-72) — chart toont vlakke lijn:
-      firstPonsMonth: (p.pons_count || 0) > 0 ? 0 : null,
       // Extra OCD-velden:
       overheidscode: p.overheidscode,
     };
-  }
-
-  // ─────────────────────────────────────────────────────────────────
-  // Tijdserie (statisch tot pons-datum-uitbreiding G-72)
-  //
-  // Returns een vlakke historie op huidige pct + lineaire projectie
-  // naar 100% in 2032. Géén verzonnen S-curve over historie.
-  // ─────────────────────────────────────────────────────────────────
-
-  function timeseries(stats) {
-    const start = new Date(2024, 0, 1);
-    const now = new Date(2026, 4, 18);
-    const deadline = new Date(2032, 0, 1);
-
-    function monthsBetween(a, b) {
-      return (b.getFullYear() - a.getFullYear()) * 12
-           + (b.getMonth() - a.getMonth());
-    }
-
-    const months = [];
-    const d = new Date(start);
-    while (d <= deadline) {
-      months.push({ year: d.getFullYear(), month: d.getMonth(), date: new Date(d) });
-      d.setMonth(d.getMonth() + 1);
-    }
-    const nowIdx = monthsBetween(start, now);
-    const totalIdx = months.length - 1;
-    const pct = stats.pct || 0;
-
-    const series = [];
-    for (let i = 0; i < months.length; i++) {
-      let v;
-      if (i <= nowIdx) {
-        // Geen historische data — vlakke lijn op huidige pct (vanaf 0)
-        v = stats.started ? pct : 0;
-      } else {
-        // Lineaire projectie naar 100% op deadline
-        const t = (i - nowIdx) / Math.max(1, (totalIdx - nowIdx));
-        v = pct + (100 - pct) * Math.min(1, t);
-      }
-      series.push({
-        idx: i,
-        year: months[i].year,
-        month: months[i].month,
-        date: months[i].date,
-        pct: +v.toFixed(2),
-        projection: i > nowIdx,
-      });
-    }
-    return { months, series, nowIdx, totalMonths: totalIdx };
   }
 
   // ─────────────────────────────────────────────────────────────────
@@ -199,7 +147,6 @@
 
   window.Ponsen = {
     PROVINCES,
-    timeseries,
     aggregate,
     provinceAggregates,
     loadGeoJSON,

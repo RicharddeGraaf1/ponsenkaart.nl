@@ -7,8 +7,6 @@
   const TODAY = new Date(2026, 4, 18); // 18 mei 2026 (peildatum demo)
   const START = new Date(2024, 0, 1);
   const DEADLINE = new Date(2032, 0, 1);
-  const MONTHS_TOTAL = monthsBetween(START, DEADLINE);
-  const NOW_IDX = monthsBetween(START, TODAY);
 
   const NL_FORMAT = new Intl.NumberFormat('nl-NL');
   const NL_FORMAT_1 = new Intl.NumberFormat('nl-NL', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
@@ -28,23 +26,15 @@
     return formatPctNum(pct) + '%';
   }
   const NL_DATE_LONG = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
-  const NL_MONTH_YEAR_SHORT = new Intl.DateTimeFormat('nl-NL', { month: 'short', year: 'numeric' });
 
   function monthsBetween(a, b) {
     return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth());
-  }
-  function monthIdxToDate(i) {
-    const d = new Date(START);
-    d.setMonth(d.getMonth() + i);
-    return d;
   }
 
   const state = {
     features: [],
     byName: new Map(),
-    pctSeriesById: new Map(), // statische voortgangs-curve per gemeente
     agg: null,
-    aggSeries: null,          // nationale pct-projectie (statisch)
     provinces: [],
     selected: null,
     hover: null,
@@ -136,15 +126,6 @@
       state.byName.set(f.properties.name, f);
     });
 
-    // Pre-compute monthly pct per feature (statische mock-curve voor chart)
-    for (const f of state.features) {
-      const ts = Ponsen.timeseries(f.properties);
-      const arr = new Float32Array(ts.series.length);
-      for (let i = 0; i < ts.series.length; i++) arr[i] = ts.series[i].pct;
-      state.pctSeriesById.set(f.id, arr);
-    }
-
-    state.aggSeries = computeNationalSeries();
     state.agg = aggregateNow();
     state.provinces = Ponsen.provinceAggregates(state.features);
 
@@ -281,22 +262,6 @@
       started, done, totalPons,
       sumAbs, totalArea
     };
-  }
-
-  function computeNationalSeries() {
-    const series = [];
-    let totalArea = 0;
-    for (const f of state.features) totalArea += f.properties.areaKm2;
-    const months = MONTHS_TOTAL + 1;
-    for (let i = 0; i < months; i++) {
-      let sumAbs = 0;
-      for (const f of state.features) {
-        const arr = state.pctSeriesById.get(f.id);
-        sumAbs += arr[i] / 100 * f.properties.areaKm2;
-      }
-      series.push({ idx: i, pct: sumAbs / totalArea * 100, projection: i > NOW_IDX });
-    }
-    return series;
   }
 
   // ============ Leaderboard ============
@@ -467,7 +432,6 @@
     const deltaCls = a.delta > 0.005 ? 'up' : a.delta < -0.005 ? 'down' : 'flat';
 
     const movers = topMovers(5);
-    const sparkSvg = drawChart(state.aggSeries.map(s => s.pct), NOW_IDX);
 
     document.getElementById('panel').innerHTML = `
       <div class="panel-head">
@@ -560,19 +524,9 @@
     if (!f) { renderPanelNational(); return; }
     state.selected = name;
 
-    const series = state.pctSeriesById.get(f.id);
     const pct = f.properties.pct;
     const delta = f.properties.delta || 0;
     const deltaCls = delta > 0.005 ? 'up' : delta < -0.005 ? 'down' : 'flat';
-
-    const firstPonsIdx = series ? series.findIndex(v => v > 0) : -1;
-    const firstPonsDate = firstPonsIdx >= 0 ? NL_MONTH_YEAR_SHORT.format(monthIdxToDate(firstPonsIdx)) : '—';
-    const projectionEndIdx = series ? series.findIndex((v, i) => i > NOW_IDX && v >= 95) : -1;
-    const eta = projectionEndIdx >= 0
-      ? NL_MONTH_YEAR_SHORT.format(monthIdxToDate(projectionEndIdx))
-      : 'na deadline';
-
-    const sparkSvg = series ? drawChart(Array.from(series), NOW_IDX) : '';
     const ponsedAreaAtT = pct / 100 * f.properties.areaKm2;
 
     let punchListHtml = '';
@@ -636,16 +590,6 @@
             <div class="sc-value">${NL_FORMAT_1.format(ponsedAreaAtT)} km²</div>
             <div class="sc-sub">van ${NL_FORMAT.format(f.properties.areaKm2)} km²</div>
           </div>
-          <div class="stat-cell">
-            <div class="sc-label">Eerste pons</div>
-            <div class="sc-value" style="font-size:15px">${firstPonsDate}</div>
-            <div class="sc-sub">${firstPonsIdx >= 0 ? '+' + Math.max(0, firstPonsIdx) + ' mnd na 2024-01' : 'nog niet'}</div>
-          </div>
-          <div class="stat-cell">
-            <div class="sc-label">Verwacht klaar</div>
-            <div class="sc-value" style="font-size:15px;${eta === 'na deadline' ? 'color:var(--red)' : ''}">${eta}</div>
-            <div class="sc-sub">${eta === 'na deadline' ? 'op koers? nee' : 'lineaire extrapolatie'}</div>
-          </div>
         </div>
 
         ${punchListHtml}
@@ -658,66 +602,6 @@
 
     const back = document.getElementById('panelBack');
     if (back) back.addEventListener('click', deselect);
-  }
-
-  // ============ Chart ============
-  function drawChart(values, nowIdx) {
-    const W = 100, H = 100;
-    const max = 100;
-    const n = values.length;
-
-    const pts = values.map((v, i) => {
-      const x = (i / (n - 1)) * W;
-      const y = H - (v / max) * (H - 10) - 4;
-      return [x, y];
-    });
-
-    const splitIdx = Math.min(nowIdx, n - 1);
-    let pathHist = '';
-    let pathProj = '';
-    for (let i = 0; i <= splitIdx; i++) {
-      pathHist += (i === 0 ? 'M' : 'L') + pts[i][0].toFixed(2) + ',' + pts[i][1].toFixed(2);
-    }
-    for (let i = splitIdx; i < n; i++) {
-      pathProj += (i === splitIdx ? 'M' : 'L') + pts[i][0].toFixed(2) + ',' + pts[i][1].toFixed(2);
-    }
-    let pathArea = pathHist + ` L${pts[splitIdx][0].toFixed(2)},${H - 4} L0,${H - 4} Z`;
-
-    const cur = pts[splitIdx];
-    const curX = (nowIdx / (n - 1)) * W;
-
-    const startY = START.getFullYear();
-    const yearMarks = [];
-    for (let y = startY; y <= DEADLINE.getFullYear(); y += 2) {
-      const monthsIn = (y - startY) * 12;
-      const x = (monthsIn / (n - 1)) * W;
-      yearMarks.push(`<line x1="${x}" x2="${x}" y1="${H - 4}" y2="${H - 1}" stroke="rgba(0,0,0,0.15)" stroke-width="0.3"/>`);
-      yearMarks.push(`<text x="${x}" y="${H + 8}" text-anchor="middle" class="chart-axis">'${String(y).slice(2)}</text>`);
-    }
-
-    const grid = [25, 50, 75].map(p => {
-      const yy = H - (p / max) * (H - 10) - 4;
-      return `<line x1="0" x2="${W}" y1="${yy}" y2="${yy}" stroke="rgba(0,0,0,0.05)" stroke-width="0.3" stroke-dasharray="0.6,0.6"/>`;
-    }).join('');
-
-    return `
-      <svg viewBox="0 0 ${W} ${H + 12}" preserveAspectRatio="none" style="width:100%;height:100%">
-        <defs>
-          <linearGradient id="areaGrad" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#1F6B43" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="#1F6B43" stop-opacity="0.02"/>
-          </linearGradient>
-        </defs>
-        ${grid}
-        ${yearMarks.join('')}
-        <line x1="${curX}" y1="2" x2="${curX}" y2="${H - 4}"
-          stroke="rgba(26,26,23,0.35)" stroke-width="0.4" stroke-dasharray="1,1"/>
-        <path d="${pathArea}" fill="url(#areaGrad)" vector-effect="non-scaling-stroke"/>
-        <path d="${pathHist}" fill="none" stroke="#1F6B43" stroke-width="1.4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-        <path d="${pathProj}" fill="none" stroke="#B8B2A8" stroke-width="1.2" stroke-dasharray="1.4,1.4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-        <circle cx="${cur[0]}" cy="${cur[1]}" r="2" fill="#1a1a17" stroke="#fff" stroke-width="0.6" vector-effect="non-scaling-stroke"/>
-      </svg>
-    `;
   }
 
   // ============ Search ============
