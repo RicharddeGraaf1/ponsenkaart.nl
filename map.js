@@ -5,9 +5,10 @@
 // viewBox pan/zoom). Daar misten we een echt-kaart-gevoel: geen
 // steden/wegen/water, alleen polygonen op een dot-grid.
 //
-// Nu: MapLibre GL JS met Carto Positron Light als raster-basemap +
-// onze data als GeoJSON-layers erbovenop. Public interface is bewust
-// gelijk gehouden aan de oude PonsMap zodat app.js minimal verandert.
+// Nu: MapLibre GL JS met PDOK BRT-Achtergrondkaart (grijs) als raster-
+// basemap + onze data als GeoJSON-layers erbovenop. Public interface
+// is bewust gelijk gehouden aan de oude PonsMap zodat app.js niet
+// hoefde te veranderen.
 // ============================================================
 
 (function () {
