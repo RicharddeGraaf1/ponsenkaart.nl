@@ -13,16 +13,15 @@
 (function () {
   'use strict';
 
-  const CARTO_TILES = [
-    'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-    'https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-    'https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-    'https://d.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png'
+  // PDOK BRT-Achtergrondkaart (Kadaster, gratis WMTS). Variant 'grijs'
+  // houdt de basemap rustig zodat de choropleth visueel kan domineren.
+  // Andere varianten beschikbaar: standaard, pastel, water.
+  const PDOK_TILES = [
+    'https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/grijs/EPSG:3857/{z}/{x}/{y}.png'
   ];
 
   const ATTRIBUTION =
-    '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · ' +
-    '© <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>';
+    'Kaartgegevens © <a href="https://www.pdok.nl/" target="_blank" rel="noopener">Kadaster / PDOK</a>';
 
   // Bbox rond NL voor initiele view en hard-stop op pannen
   const NL_BOUNDS = [[3.0, 50.6], [7.5, 53.7]];
@@ -52,14 +51,14 @@
         style: {
           version: 8,
           sources: {
-            'carto': {
+            'pdok-brt': {
               type: 'raster',
-              tiles: CARTO_TILES,
+              tiles: PDOK_TILES,
               tileSize: 256,
               attribution: ATTRIBUTION
             }
           },
-          layers: [{ id: 'carto-base', type: 'raster', source: 'carto' }]
+          layers: [{ id: 'pdok-brt-base', type: 'raster', source: 'pdok-brt' }]
         },
         bounds: NL_BOUNDS,
         fitBoundsOptions: { padding: 20 },

@@ -275,7 +275,17 @@ a { color: inherit; text-decoration: none; }
 .bar-fill { height: 100%; transition: width .4s cubic-bezier(.2,.7,.2,1); }
 .bar-fill-green  { background: var(--green); }
 .bar-fill-yellow { background: var(--yellow); }
-.bar-fill-time   { background: linear-gradient(90deg, var(--green) 0%, var(--yellow) 60%, var(--red) 100%); }
+.bar-fill-time {
+  /* Gradient moet relatief aan de hele balk (0% = nu, 100% = 1 jan 2032)
+     gerenderd worden, niet aan de smalle fill zelf. Background-size
+     wordt geschaald via --time-fraction (gezet in app.js renderKPIs):
+     bij 29% verstreken zie je alleen het groene begin van de scale,
+     niet de hele rood-gele compressie binnen 29% width. */
+  background-image: linear-gradient(90deg, var(--green) 0%, var(--yellow) 60%, var(--red) 100%);
+  background-size: calc(100% / var(--time-fraction, 1)) 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 /* ---------- Main layout ---------- */
 .layout {

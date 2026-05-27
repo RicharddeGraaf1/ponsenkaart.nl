@@ -110,7 +110,7 @@
   }
 
   // ─────────────────────────────────────────────────────────────────
-  // Aggregaten (lokaal berekend uit features — eenvoudig en cache-loos)
+  // Aggregaten (lokaal berekend uit features)
   // ─────────────────────────────────────────────────────────────────
 
   function aggregate(allStats) {

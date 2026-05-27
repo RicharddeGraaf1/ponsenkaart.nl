@@ -253,7 +253,11 @@
     const totalTransitionMonths = monthsBetween(START, DEADLINE);
     const elapsed = monthsBetween(START, TODAY);
     const pct = (elapsed / totalTransitionMonths) * 100;
-    document.getElementById('kpiTimeBar').style.width = Math.min(100, pct) + '%';
+    const timeBar = document.getElementById('kpiTimeBar');
+    timeBar.style.width = Math.min(100, pct) + '%';
+    // Schaalt de gradient relatief aan de hele balk (zie styles.css);
+    // ondergrens voorkomt divisie-door-nul issues bij pct = 0.
+    timeBar.style.setProperty('--time-fraction', Math.max(0.01, Math.min(1, pct / 100)));
     document.getElementById('kpiTimePct').textContent =
       Math.round(pct) + '% van transitieperiode verstreken';
   }
