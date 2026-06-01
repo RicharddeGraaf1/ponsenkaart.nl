@@ -1,41 +1,36 @@
 // Cloudflare Pages Function — server-side proxy naar OCD-API op Railway.
 //
 // Doel:
-//   1. Cloudflare-edge in het pad → DDoS-bescherming + WAF + edge-cache
+//   1. Cloudflare-edge in het pad → DDoS-bescherming + WAF
 //   2. OCD_API_KEY_PUBLIC blijft server-side (niet in HTML zichtbaar)
 //   3. Same-origin requests vanuit de browser (geen CORS-config nodig)
 //
 // Whitelist: alleen ponsenkaart-endpoints + /health worden door-gerouteerd,
 // zodat deze proxy niet misbruikt kan worden voor andere OCD-paden.
+//
+// Caching: via `Cache-Control` response-headers (zie eind van deze handler).
+// Bewust géén `caches.default.put` en géén `cf: { cacheTtl }` op de
+// upstream-fetch — die twee cache-lagen zijn NIET via zone-Purge-Everything
+// te raken (geleerd 2026-06-01 op omgevingsvergunningenregister.nl: foute
+// responses bleven uren hangen). Cloudflare's CDN-cache respecteert wel
+// `Cache-Control: s-maxage=...` en die IS via zone-dashboard purgebaar.
+// Bij data-ververs → Purge Everything en de cache is leeg, eerste user
+// vult 'm vers.
 
 const UPSTREAM = 'https://ocd-api-production.up.railway.app';
-const ALLOWED_PREFIXES = ['/v1/ponsenkaart/', '/health'];
+const ALLOWED_PREFIXES = ['/v1/ponsenkaart', '/health'];
 
-export async function onRequest({ request, env, params, waitUntil }) {
+export async function onRequest({ request, env, params }) {
   // params.catchall is array van path-segmenten (bv. ['v1','ponsenkaart','stats'])
   const segments = Array.isArray(params.catchall) ? params.catchall : [params.catchall];
   const upstreamPath = '/' + segments.join('/');
 
+  // Match: exacte gelijkheid (path zelf) of prefix met / erachter (subpath).
   const isAllowed = ALLOWED_PREFIXES.some(prefix =>
-    prefix.endsWith('/') ? upstreamPath.startsWith(prefix) : upstreamPath === prefix
+    upstreamPath === prefix || upstreamPath.startsWith(prefix + '/')
   );
   if (!isAllowed) {
     return new Response('Not Found', { status: 404 });
-  }
-
-  // Top-level edge-cache: bij hit slaat Cloudflare deze Function helemaal
-  // over en serveert direct van edge. Beschermt de Function-invocation-
-  // quota onder DDoS én ontlast Railway.
-  const cache = caches.default;
-  const cacheKey = new Request(request.url, { method: 'GET' });
-
-  if (request.method === 'GET') {
-    const cached = await cache.match(cacheKey);
-    if (cached) {
-      const h = new Headers(cached.headers);
-      h.set('x-cache', 'HIT');
-      return new Response(cached.body, { status: cached.status, headers: h });
-    }
   }
 
   const url = new URL(request.url);
@@ -46,20 +41,22 @@ export async function onRequest({ request, env, params, waitUntil }) {
   upstreamReq.headers.delete('host');
   upstreamReq.headers.delete('cookie');
 
-  // Subrequest-cache: zelfs bij Function-miss laat dit Cloudflare de
-  // upstream-respons cachen, zodat Railway alleen bij echte cache-miss
-  // wordt aangesproken.
-  const response = await fetch(upstreamReq, {
-    cf: { cacheTtl: 86400, cacheEverything: true },
-  });
+  const response = await fetch(upstreamReq);
 
-  // Top-level cache vullen voor volgende GETs (alleen succes-responses).
+  // Alleen succes-responses GET-cachen. Errors mogen niet maandenlang hangen
+  // (al zijn ze nu wel purgebaar — beter is voorkomen).
   if (request.method === 'GET' && response.ok) {
-    const respToCache = response.clone();
-    waitUntil(cache.put(cacheKey, respToCache));
+    const headers = new Headers(response.headers);
+    // browser: 5 min — refresh-knop voelt snel zonder veel server-druk
+    // CDN (CF): 24 h — wekelijkse matview-refresh van OCD ruim binnen dat venster
+    // → bij data-update doe je Purge Everything en alle users zien direct vers.
+    headers.set('Cache-Control', 'public, max-age=300, s-maxage=86400');
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   }
 
-  const h = new Headers(response.headers);
-  h.set('x-cache', 'MISS');
-  return new Response(response.body, { status: response.status, headers: h });
+  return response;
 }
