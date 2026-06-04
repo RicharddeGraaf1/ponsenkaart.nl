@@ -366,7 +366,7 @@
       s.style.display = 'none';
       if (extra) extra.innerHTML =
         '<span class="sw" style="background:#1F6B43;opacity:0.55"></span> pons (geponst gebied)' +
-        '<br><span class="sw" style="background:#E0EAE4;margin-top:4px"></span> gemeente waarin reeds geponst' +
+        '<br><span class="sw" style="background:#E0EAE4;margin-top:4px"></span> gemeente waarin reeds is geponst' +
         '<br><span class="sw sw-gray" style="margin-top:4px"></span> nog niet gestart';
     }
   }
