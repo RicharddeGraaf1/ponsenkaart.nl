@@ -104,8 +104,7 @@
   function styleFn(feature) {
     // In pons-mode dempen we de gemeente-fill zodat de polygonen visueel domineren.
     if (state.mode === 'pons') {
-      const pct = feature.properties.pct || 0;
-      if (pct <= 0) return '#E8E5DD';
+      if ((feature.properties.ponsCount || 0) <= 0) return '#E8E5DD';
       // Lichte tint naar groen — alleen om gestart/niet-gestart te tonen
       return '#E0EAE4';
     }
@@ -252,7 +251,7 @@
       totalArea += area;
       sumAbs += pct / 100 * area;
       prevAbs += prevPct / 100 * area;
-      if (pct > 0) started++;
+      if ((f.properties.ponsCount || 0) > 0) started++;
       if (pct >= 95) done++;
       totalPons += f.properties.ponsCount;
     }
