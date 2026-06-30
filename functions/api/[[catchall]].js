@@ -18,7 +18,7 @@
 // vult 'm vers.
 
 const UPSTREAM = 'https://ocd-api-production.up.railway.app';
-const ALLOWED_PREFIXES = ['/v1/ponsenkaart', '/health'];
+const ALLOWED_PREFIXES = ['/v1/ponsenkaart', '/v1/planvoorraad', '/health'];
 
 export async function onRequest({ request, env, params }) {
   // params.catchall is array van path-segmenten (bv. ['v1','ponsenkaart','stats'])

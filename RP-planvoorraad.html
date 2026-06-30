@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl" class="rp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ponsenkaart.nl — RP-planvoorraad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="rp-planvoorraad.css">
+</head>
+<body class="rp">
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="2" fill="none" stroke="#1a1a17" stroke-width="1.5"/>
+      <circle cx="8" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="24" cy="8" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="16" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="16" r="1.6" fill="#D4A017"/>
+      <circle cx="24" cy="16" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="24" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="24" r="1.6" fill="#B8B2A8"/>
+      <circle cx="24" cy="24" r="1.6" fill="#B8B2A8"/>
+    </svg>
+    <span class="brand-name">Ponsenkaart<span class="brand-tld">.nl</span></span>
+  </a>
+
+  <nav class="viewnav" aria-label="Weergave">
+    <a href="/">Kaart</a>
+    <a href="RP-planvoorraad.html" class="active" aria-current="page">RP-planvoorraad</a>
+  </nav>
+
+  <div class="search">
+    <svg viewBox="0 0 20 20" aria-hidden="true" class="search-icon">
+      <circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M13.5 13.5 L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <input id="search" type="text" placeholder="Zoek gemeente…" autocomplete="off">
+    <div class="search-results" id="searchResults" hidden></div>
+  </div>
+</header>
+
+<section class="kpis" id="kpis">
+  <div class="kpi">
+    <div class="kpi-label">Plannen in voorraad (NL)</div>
+    <div class="kpi-value"><span id="kpiVoorraad">0</span></div>
+    <div class="kpi-foot">
+      <span class="kpi-foot-note" id="kpiPeil">—</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Sinds start verdwenen</div>
+    <div class="kpi-value"><span id="kpiVerdwenen">0</span></div>
+    <div class="kpi-foot">
+      <span class="kpi-foot-note">cumulatief echt weggehaald</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Gemeenten met leeg manifest</div>
+    <div class="kpi-value"><span id="kpiLeeg">0</span><span class="kpi-unit">/ 342</span></div>
+    <div class="kpi-foot">
+      <div class="bar"><div class="bar-fill bar-fill-green" id="kpiLeegBar"></div></div>
+      <span class="kpi-foot-note" id="kpiLeegPct">0%</span>
+    </div>
+  </div>
+</section>
+
+<main class="rp-main">
+  <section class="rp-col" id="leftCol">
+    <div class="gem-head">
+      <h2>Gemeenten</h2>
+      <div class="sub">Leegloop van de bestemmingsplan-voorraad</div>
+      <div class="gem-sort">
+        <button data-sort="pct" class="active">% afgenomen</button>
+        <button data-sort="naam">Naam</button>
+        <button data-sort="nu">In voorraad</button>
+        <button data-sort="verdwenen">Verdwenen</button>
+      </div>
+    </div>
+    <div class="gem-list" id="gemList"></div>
+  </section>
+
+  <section class="rp-col" id="detailCol">
+    <!-- gevuld door JS -->
+  </section>
+</main>
+
+<!-- cel-tooltip -->
+<div class="pc-tip" id="pcTip" hidden></div>
+
+<!-- detail-overlay -->
+<div class="overlay-scrim" id="overlay" hidden>
+  <div class="overlay" id="overlayBody"></div>
+</div>
+
+<script>
+  // OCD-API configuratie — zelfde patroon als de pons-kaartview.
+  // Lokaal dev praat direct met de OCD-API; productie gaat via /api
+  // (Cloudflare Pages Function proxy) zodat de key server-side blijft.
+  window.OCD_API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://localhost:8002'
+    : '/api';
+  window.OCD_API_KEY = '';
+</script>
+<script src="rp-data.js"></script>
+<script src="rp-app.js"></script>
+</body>
+</html>
