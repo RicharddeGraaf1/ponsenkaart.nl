@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="nl" class="rp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ponsenkaart.nl — Combinatie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ============================================================
+   Combinatie — view-specifieke stijl
+   Bouwt voort op styles.css (tokens, topbar, kpi, search).
+   ============================================================ */
+
+/* Deze view scrollt als document i.p.v. de vaste map-grid */
+html.rp, body.rp { height: auto; overflow: auto; }
+body.rp { display: block; min-height: 100vh; }
+
+.rp .topbar { position: sticky; top: 0; height: var(--h-top); }
+
+/* Sub-navigatie */
+.viewnav {
+  display: flex; align-items: center; gap: 2px;
+  padding: 0 4px; justify-self: center;
+}
+.viewnav a {
+  font-size: 12px; font-weight: 500; color: var(--ink-muted);
+  padding: 6px 12px; border-radius: 4px; white-space: nowrap;
+}
+.viewnav a:hover { background: var(--bg-sunk); color: var(--ink); }
+.viewnav a.active { background: var(--ink-strong); color: var(--bg-card); }
+
+/* ---------- KPI-rij ---------- */
+.kpis.combo { grid-template-columns: repeat(4, 1fr); }
+.kpi-value.mid { font-size: 46px; }
+.kpi-score-pill {
+  display: inline-flex; align-items: baseline; gap: 4px;
+}
+.kpi-mini-track {
+  height: 5px; border-radius: 3px; background: var(--gray-soft);
+  overflow: hidden; flex: 1; min-width: 60px; position: relative;
+}
+.kpi-mini-track > i { display: block; height: 100%; border-radius: 3px; }
+.mini-green > i { background: var(--green); }
+.mini-yellow > i { background: var(--yellow); }
+.mini-ink > i { background: var(--ink-strong); }
+
+/* ---------- Weergave-switch (tabel / kwadrant) ---------- */
+.view-switch {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 22px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--line);
+}
+.view-switch .vs-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink-muted); font-weight: 600;
+}
+.vs-btns {
+  display: flex; gap: 2px; padding: 3px;
+  background: var(--bg-sunk); border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.vs-btn {
+  border: 0; background: transparent;
+  font-size: 12px; font-weight: 500;
+  padding: 6px 14px; border-radius: 5px;
+  color: var(--ink-muted);
+}
+.vs-btn:hover { color: var(--ink); }
+.vs-btn.active { background: var(--ink-strong); color: var(--bg-card); }
+
+/* ---------- Hero: kwadrant-scatter ---------- */
+.hero {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--line);
+  padding: 20px 22px 22px;
+}
+.hero-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 14px;
+}
+.hero-title { font-size: 15px; font-weight: 600; color: var(--ink-strong); margin: 0; letter-spacing: -0.01em; }
+.hero-sub { font-size: 12px; color: var(--ink-muted); margin-top: 3px; max-width: 560px; line-height: 1.5; }
+.hero-legend { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--ink-muted); }
+.hl .sw { width: 11px; height: 11px; border-radius: 3px; }
+.hl .sw.q-green { background: var(--green-soft); border: 1px solid rgba(31,107,67,0.35); }
+.hl .sw.q-gray { background: var(--gray-soft); border: 1px solid var(--line-strong); }
+.hl .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
+
+.scatter-wrap {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); overflow: hidden;
+}
+.scatter-wrap svg { width: 100%; height: auto; display: block; }
+.sc-quad-green { fill: var(--green-soft); opacity: 0.55; }
+.sc-quad-gray { fill: var(--gray-soft); opacity: 0.4; }
+.sc-grid { stroke: var(--line); stroke-width: 1; }
+.sc-mid { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 4 4; }
+.sc-axis-line { stroke: var(--line-strong); stroke-width: 1; }
+.sc-axis-txt { font-family: var(--mono); font-size: 10px; fill: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.sc-axis-label { font-family: var(--sans); font-size: 11px; font-weight: 600; fill: var(--ink-muted); }
+.sc-quad-note { font-family: var(--sans); font-size: 11px; font-weight: 600; }
+.sc-quad-note.green { fill: var(--green-deep); opacity: 0.75; }
+.sc-quad-note.gray { fill: var(--ink-faint); }
+.sc-pt {
+  cursor: pointer; stroke: var(--bg-card); stroke-width: 1.5;
+  transition: r .1s;
+}
+.sc-pt.green { fill: var(--green); }
+.sc-pt.yellow { fill: var(--yellow); }
+.sc-pt.gray { fill: var(--gray); }
+.sc-pt:hover, .sc-pt.hot { r: 8; stroke-width: 2; }
+.sc-pt.dim { opacity: 0.16; }
+
+/* scatter tooltip */
+.sc-tip {
+  position: fixed; pointer-events: none; z-index: 200;
+  background: var(--ink-strong); color: var(--bg-card);
+  font-size: 11px; padding: 8px 10px; border-radius: 5px;
+  box-shadow: var(--shadow-md); max-width: 200px;
+}
+.sc-tip[hidden] { display: none; }
+.sc-tip .n { font-weight: 600; font-size: 12px; margin-bottom: 5px; }
+.sc-tip .r { display: flex; justify-content: space-between; gap: 14px; padding: 1px 0; color: var(--gray-soft); }
+.sc-tip .r b { font-family: var(--mono); color: #fff; font-variant-numeric: tabular-nums; }
+
+/* ---------- Tabel-sectie ---------- */
+.table-wrap { background: var(--bg-card); }
+.table-wrap[hidden], .hero[hidden] { display: none; }
+.table-bar {
+  position: sticky; top: var(--h-top);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  padding: 14px 22px 12px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--line);
+  z-index: 6;
+}
+.table-bar h2 { font-size: 13px; font-weight: 600; margin: 0; color: var(--ink-strong); letter-spacing: -0.01em; }
+.table-bar .sub { font-size: 11px; color: var(--ink-faint); margin-top: 2px; }
+.tb-right { display: flex; align-items: center; gap: 16px; }
+.tb-count { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+
+.toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--ink-muted); user-select: none; cursor: pointer;
+}
+.toggle input { position: absolute; opacity: 0; pointer-events: none; }
+.toggle .box {
+  width: 34px; height: 19px; border-radius: 10px;
+  background: var(--gray-soft); border: 1px solid var(--line-strong);
+  position: relative; transition: background .15s, border-color .15s; flex-shrink: 0;
+}
+.toggle .box::after {
+  content: ""; position: absolute; top: 1px; left: 1px;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--bg-card); box-shadow: var(--shadow-sm);
+  transition: transform .15s;
+}
+.toggle input:checked + .box { background: var(--green); border-color: var(--green); }
+.toggle input:checked + .box::after { transform: translateX(15px); }
+.toggle input:focus-visible + .box { box-shadow: 0 0 0 3px rgba(31,107,67,0.18); }
+
+/* de tabel zelf */
+.combo-table { width: 100%; border-collapse: collapse; }
+.combo-table thead th {
+  position: sticky; top: calc(var(--h-top) + 52px);
+  background: var(--bg-sunk);
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+  font-weight: 600; color: var(--ink-muted);
+  text-align: left; padding: 9px 14px;
+  border-bottom: 1px solid var(--line-strong);
+  white-space: nowrap; z-index: 5;
+}
+.combo-table th.sortable { cursor: pointer; user-select: none; }
+.combo-table th.sortable:hover { color: var(--ink); background: var(--gray-soft); }
+.combo-table th .arrow { color: var(--green); margin-left: 3px; font-size: 9px; opacity: 0; }
+.combo-table th.sorted .arrow { opacity: 1; }
+.combo-table th.num, .combo-table td.num { text-align: right; }
+.combo-table th.ext, .combo-table td.ext { display: none; }
+.combo-table.show-ext th.ext, .combo-table.show-ext td.ext { display: table-cell; }
+
+.combo-table tbody tr {
+  border-bottom: 1px solid var(--line); cursor: default;
+}
+.combo-table tbody tr:hover { background: var(--bg-sunk); }
+.combo-table td { padding: 11px 14px; vertical-align: middle; }
+
+.c-rank { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); font-variant-numeric: tabular-nums; width: 44px; }
+.c-rank.top { color: var(--green-deep); font-weight: 600; }
+
+.c-gem .nm { font-size: 13px; font-weight: 500; color: var(--ink-strong); display: flex; align-items: center; gap: 7px; }
+.c-gem .nm .code { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); font-weight: 400; }
+.c-gem .pv { font-size: 11px; color: var(--ink-muted); margin-top: 2px; }
+
+/* percentage-cel met inline balk */
+.metric { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-width: 96px; }
+.metric .v { font-family: var(--mono); font-size: 13px; font-weight: 500; color: var(--ink-strong); font-variant-numeric: tabular-nums; }
+.metric .v .u { font-size: 10px; color: var(--ink-faint); }
+.metric .track { width: 88px; height: 4px; border-radius: 2px; background: var(--gray-soft); overflow: hidden; }
+.metric .track > i { display: block; height: 100%; border-radius: 2px; }
+.track.green > i { background: var(--green); }
+.track.yellow > i { background: var(--yellow); }
+
+/* combinatie-score pill (hoofdkolom) */
+.score-cell { text-align: right; }
+.score-pill {
+  display: inline-flex; align-items: baseline; gap: 2px;
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: 15px; font-weight: 600;
+  padding: 5px 11px; border-radius: 14px;
+  border: 1px solid transparent; min-width: 54px; justify-content: center;
+}
+.score-pill.s-high { background: var(--green-soft); color: var(--green-deep); border-color: rgba(31,107,67,0.28); }
+.score-pill.s-mid { background: var(--yellow-soft); color: #8a6800; border-color: rgba(212,160,23,0.3); }
+.score-pill.s-low { background: var(--gray-soft); color: var(--ink-muted); border-color: var(--line-strong); }
+
+.c-mono { font-family: var(--mono); font-size: 12px; color: var(--ink); font-variant-numeric: tabular-nums; text-align: right; }
+.c-mono.faint { color: var(--ink-muted); }
+
+/* scheef-vlag: groot verschil tussen de twee meetlatten */
+.skew {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 16px; border-radius: 8px; margin-left: 6px;
+  background: var(--yellow-soft); color: #8a6800;
+  font-family: var(--mono); font-size: 10px; font-weight: 700;
+  cursor: help; vertical-align: middle;
+}
+
+/* "?"-info knop bij score-kop */
+.info {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%; margin-left: 4px;
+  border: 1px solid var(--line-strong); background: var(--bg-card);
+  color: var(--ink-faint); font-size: 9px; font-weight: 700;
+  cursor: help; position: relative; vertical-align: middle;
+}
+.info:hover { color: var(--ink); border-color: var(--ink-faint); }
+.info .pop {
+  display: none; position: absolute; bottom: calc(100% + 8px); right: -8px;
+  width: 232px; text-align: left;
+  background: var(--ink-strong); color: var(--bg-card);
+  font-size: 11px; font-weight: 400; line-height: 1.5; letter-spacing: 0;
+  text-transform: none; padding: 10px 12px; border-radius: 6px;
+  box-shadow: var(--shadow-md); z-index: 40;
+}
+.info .pop b { color: #fff; font-weight: 600; }
+.info .pop code {
+  font-family: var(--mono); background: rgba(255,255,255,0.14);
+  padding: 1px 5px; border-radius: 3px; font-size: 10px;
+}
+.info .pop::after {
+  content: ""; position: absolute; top: 100%; right: 10px;
+  border: 5px solid transparent; border-top-color: var(--ink-strong);
+}
+.info:hover .pop { display: block; }
+
+.no-results { padding: 48px 22px; text-align: center; color: var(--ink-faint); font-size: 13px; }
+
+/* ---------- Footer ---------- */
+.combo-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap; padding: 16px 22px 30px;
+  font-size: 11px; color: var(--ink-faint); line-height: 1.5;
+}
+.combo-foot .legenda { display: flex; gap: 16px; flex-wrap: wrap; }
+.combo-foot .lg { display: inline-flex; align-items: center; gap: 6px; }
+.combo-foot .lg .chip-dot { width: 9px; height: 9px; border-radius: 50%; }
+.combo-foot .lg.green .chip-dot { background: var(--green); }
+.combo-foot .lg.yellow .chip-dot { background: var(--yellow); }
+.combo-foot .lg.gray .chip-dot { background: var(--gray); }
+
+@media (max-width: 1100px) {
+  .kpi-value { font-size: 40px; }
+  .kpi-value.mid { font-size: 36px; }
+}
+@media (max-width: 900px) {
+  .kpis.combo { grid-template-columns: repeat(2, 1fr); }
+  .topbar { grid-template-columns: 1fr auto; }
+  .viewnav { grid-column: 1 / -1; justify-self: start; padding: 0 0 8px; }
+}
+@media (max-width: 720px) {
+  .table-scroll { overflow-x: auto; }
+  .combo-table { min-width: 640px; }
+  .combo-table thead th { top: auto; }
+}
+</style>
+</head>
+<body class="rp">
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="2" fill="none" stroke="#1a1a17" stroke-width="1.5"/>
+      <circle cx="8" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="8" r="1.6" fill="#1F6B43"/>
+      <circle cx="24" cy="8" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="16" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="16" r="1.6" fill="#D4A017"/>
+      <circle cx="24" cy="16" r="1.6" fill="#B8B2A8"/>
+      <circle cx="8" cy="24" r="1.6" fill="#1F6B43"/>
+      <circle cx="16" cy="24" r="1.6" fill="#B8B2A8"/>
+      <circle cx="24" cy="24" r="1.6" fill="#B8B2A8"/>
+    </svg>
+    <span class="brand-name">Ponsenkaart<span class="brand-tld">.nl</span></span>
+  </a>
+
+  <nav class="viewnav" aria-label="Weergave">
+    <a href="/">Kaart</a>
+    <a href="RP-planvoorraad.html">RP-planvoorraad</a>
+    <a href="Combinatie.html" class="active" aria-current="page">Combinatie</a>
+  </nav>
+
+  <div class="search">
+    <svg viewBox="0 0 20 20" aria-hidden="true" class="search-icon">
+      <circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M13.5 13.5 L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <input id="search" type="text" placeholder="Zoek gemeente…" autocomplete="off">
+  </div>
+</header>
+
+<section class="kpis combo">
+  <div class="kpi">
+    <div class="kpi-label">Gem. % geponst</div>
+    <div class="kpi-value mid"><span id="kpiPct">0,0</span><span class="kpi-unit">%</span></div>
+    <div class="kpi-foot">
+      <div class="kpi-mini-track mini-green"><i id="kpiPctBar"></i></div>
+      <span class="kpi-foot-note">oppervlakte-gewogen</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Gem. % afgenomen planvoorraad</div>
+    <div class="kpi-value mid"><span id="kpiAf">0,0</span><span class="kpi-unit">%</span></div>
+    <div class="kpi-foot">
+      <div class="kpi-mini-track mini-yellow"><i id="kpiAfBar"></i></div>
+      <span class="kpi-foot-note">leegloop oude plannen</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Landelijke combinatie-score</div>
+    <div class="kpi-value mid"><span id="kpiScore">0</span><span class="kpi-unit">/ 100</span></div>
+    <div class="kpi-foot">
+      <div class="kpi-mini-track mini-ink"><i id="kpiScoreBar"></i></div>
+      <span class="kpi-foot-note">ongewogen gemiddelde</span>
+    </div>
+  </div>
+
+  <div class="kpi">
+    <div class="kpi-label">Koplopers op beide</div>
+    <div class="kpi-value mid"><span id="kpiKop">0</span><span class="kpi-unit">gem.</span></div>
+    <div class="kpi-foot">
+      <span class="delta good" id="kpiKopDelta">0</span>
+      <span class="kpi-foot-note">≥ 50% op beide meetlatten</span>
+    </div>
+  </div>
+</section>
+
+<section class="view-switch">
+  <span class="vs-label">Weergave</span>
+  <div class="vs-btns" role="tablist" aria-label="Kwadrant of tabel">
+    <button class="vs-btn" data-view="tabel" role="tab">Tabelweergave</button>
+    <button class="vs-btn" data-view="kwadrant" role="tab">Kwadrantweergave</button>
+  </div>
+</section>
+
+<section class="hero" id="heroSection" hidden>
+  <div class="hero-head">
+    <div>
+      <h2 class="hero-title">Kwadrant — geponst versus afgenomen planvoorraad</h2>
+      <p class="hero-sub">Elke gemeente is één punt. Rechtsboven staan de koplopers die op beide meetlatten voorlopen; linksonder de gemeenten die nog moeten beginnen. Beweeg over een punt voor de details.</p>
+    </div>
+    <div class="hero-legend">
+      <span class="hl"><span class="sw q-green"></span>Koplopers op beide</span>
+      <span class="hl"><span class="sw q-gray"></span>Nog te doen</span>
+      <span class="hl"><span class="dot"></span>Gemeente</span>
+    </div>
+  </div>
+  <div class="scatter-wrap">
+    <svg id="scatter" viewBox="0 0 820 470" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Kwadrant-scatter van gemeenten"></svg>
+  </div>
+</section>
+
+<section class="table-wrap" id="tableSection">
+  <div class="table-bar">
+    <div>
+      <h2>Ranglijst gemeenten</h2>
+      <div class="sub">Gesorteerd op gecombineerde score · <span class="tb-count" id="tbCount">laden…</span></div>
+    </div>
+    <div class="tb-right">
+      <label class="toggle">
+        <input type="checkbox" id="extToggle">
+        <span class="box"></span>
+        <span>Uitgebreide scores</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="table-scroll">
+    <table class="combo-table" id="table">
+      <thead>
+        <tr>
+          <th class="num sortable" data-key="rank" style="width:44px">#<span class="arrow">▾</span></th>
+          <th class="sortable" data-key="naam">Gemeente<span class="arrow">▾</span></th>
+          <th class="num sortable" data-key="pct">% geponst<span class="arrow">▾</span></th>
+          <th class="num sortable" data-key="pctAf">% afgenomen<span class="arrow">▾</span></th>
+          <th class="num sortable sorted" data-key="score">Combinatie<span class="info" tabindex="0">?<span class="pop"><b>Combinatie-score (0–100)</b><br>Ongewogen gemiddelde van beide meetlatten:<br><code>score = ½·(% geponst) + ½·(% afgenomen)</code><br>De weging is een parameter; standaard 50/50.</span></span><span class="arrow">▾</span></th>
+          <th class="num ext sortable" data-key="plansNu">In voorraad<span class="arrow">▾</span></th>
+          <th class="num ext sortable" data-key="verdwenen">Verdwenen<span class="arrow">▾</span></th>
+          <th class="num ext sortable" data-key="absKm2">Ponsoppervlak<span class="arrow">▾</span></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="no-results" id="noResults" hidden>Geen gemeenten gevonden.</div>
+  </div>
+</section>
+
+<footer class="combo-foot">
+  <div class="legenda">
+    <span class="lg green"><span class="chip-dot"></span>Score ≥ 60 — op koers</span>
+    <span class="lg yellow"><span class="chip-dot"></span>Score 40–60 — onderweg</span>
+    <span class="lg gray"><span class="chip-dot"></span>Score &lt; 40 — nog te doen</span>
+  </div>
+  <div id="footNote">Cijfers uit de DSO / Kadaster-API</div>
+</footer>
+
+<div class="sc-tip" id="scTip" hidden></div>
+
+<script>
+  // OCD-API configuratie — zelfde patroon als de andere twee views.
+  // Lokaal dev praat direct met de OCD-API; productie gaat via /api
+  // (Cloudflare Pages Function proxy) zodat de key server-side blijft.
+  window.OCD_API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://localhost:8002'
+    : '/api';
+  window.OCD_API_KEY = '';
+</script>
+<script>
+(function () {
+  'use strict';
+
+  const API_BASE = (window.OCD_API_BASE || 'http://localhost:8002');
+  const API_KEY  = (window.OCD_API_KEY  || '');
+  const W = 0.5; // weging % geponst in de score (ongewogen = 0,5)
+
+  let GEM = [];
+
+  // ---------- Data-laag: join ponsen × planvoorraad op gemeentecode ----------
+  async function apiGet(path) {
+    const headers = {};
+    if (API_KEY) headers['X-Api-Key'] = API_KEY;
+    const res = await fetch(API_BASE + path, { headers });
+    if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`);
+    return res.json();
+  }
+
+  async function loadGEM() {
+    // Ponsen levert alle gemeenten als GeoJSON (choropleth-basis);
+    // planvoorraad levert de leegloop-aggregaten. Join op de gemeentecode
+    // (ponsen: overheidscode, planvoorraad: code — beide "gm0637").
+    const [pons, rp] = await Promise.all([
+      apiGet('/v1/ponsenkaart/gemeenten'),
+      apiGet('/v1/planvoorraad/gemeenten'),
+    ]);
+
+    const rpMap = new Map((rp || []).map(g => [g.code, g]));
+    const out = [];
+    for (const f of (pons.features || [])) {
+      const p = f.properties || {};
+      const code = p.overheidscode;
+      if (!code) continue;
+      const r = rpMap.get(code);
+      const pct   = +(p.pct || 0);
+      // pct_af komt uit de API als fractie (0–1); de view rekent in 0–100.
+      const pctAf = r ? +(r.pct_af || 0) * 100 : 0;
+      out.push({
+        naam: p.naam,
+        provincie: p.provincie,
+        code,
+        pct,
+        pctAf,
+        areaKm2: +(p.gemeente_opp_km2 || 0),  // voor de opp-gewogen KPI
+        absKm2:  +(p.geponst_opp_km2  || 0),  // uitgebreide kolom
+        plansNu:   r ? (r.plans_nu  || 0) : 0,
+        verdwenen: r ? (r.verdwenen || 0) : 0,
+        score: Math.round(pct * W + pctAf * (1 - W)),
+      });
+    }
+    return out;
+  }
+
+  // ---------- Nederlandse getalnotatie ----------
+  const nlInt = n => n.toLocaleString('nl-NL');
+  const nl1 = n => n.toLocaleString('nl-NL', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  function cls(v) { return v >= 60 ? 'green' : v >= 40 ? 'yellow' : 'gray'; }
+  function scoreCls(v) { return v >= 60 ? 's-high' : v >= 40 ? 's-mid' : 's-low'; }
+
+  // ---------- KPI's ----------
+  function computeKpis() {
+    if (!GEM.length) return;
+    const totalArea = GEM.reduce((s, g) => s + g.areaKm2, 0);
+    const avgPct = totalArea > 0
+      ? GEM.reduce((s, g) => s + g.pct * g.areaKm2, 0) / totalArea  // opp-gewogen
+      : 0;
+    const avgAf = GEM.reduce((s, g) => s + g.pctAf, 0) / GEM.length;
+    const avgScore = GEM.reduce((s, g) => s + g.score, 0) / GEM.length;
+    const kop = GEM.filter(g => g.pct >= 50 && g.pctAf >= 50).length;
+
+    document.getElementById('kpiPct').textContent = nl1(avgPct);
+    document.getElementById('kpiAf').textContent = nl1(avgAf);
+    document.getElementById('kpiScore').textContent = Math.round(avgScore);
+    document.getElementById('kpiKop').textContent = kop;
+    document.getElementById('kpiPctBar').style.width = avgPct + '%';
+    document.getElementById('kpiAfBar').style.width = avgAf + '%';
+    document.getElementById('kpiScoreBar').style.width = avgScore + '%';
+    document.getElementById('kpiKopDelta').textContent = Math.round(kop / GEM.length * 100) + '%';
+  }
+
+  // ---------- Scatter ----------
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const svg = document.getElementById('scatter');
+  const VB = { w: 820, h: 470 };
+  const M = { l: 52, r: 24, t: 20, b: 46 };
+  const PW = VB.w - M.l - M.r;
+  const PH = VB.h - M.t - M.b;
+  const sx = v => M.l + (v / 100) * PW;
+  const sy = v => M.t + (1 - v / 100) * PH;
+
+  function el(name, attrs, txt) {
+    const e = document.createElementNS(SVG_NS, name);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (txt != null) e.textContent = txt;
+    return e;
+  }
+
+  function buildScatter() {
+    svg.innerHTML = '';
+    const midX = sx(50), midY = sy(50);
+
+    // kwadrant-tinten
+    svg.appendChild(el('rect', { class: 'sc-quad-green', x: midX, y: M.t, width: sx(100) - midX, height: midY - M.t }));
+    svg.appendChild(el('rect', { class: 'sc-quad-gray', x: M.l, y: midY, width: midX - M.l, height: sy(0) - midY }));
+
+    // rasterlijnen
+    [0, 25, 50, 75, 100].forEach(v => {
+      svg.appendChild(el('line', { class: v === 50 ? 'sc-mid' : 'sc-grid', x1: sx(v), y1: M.t, x2: sx(v), y2: sy(0) }));
+      svg.appendChild(el('line', { class: v === 50 ? 'sc-mid' : 'sc-grid', x1: M.l, y1: sy(v), x2: sx(100), y2: sy(v) }));
+    });
+
+    // assen
+    svg.appendChild(el('line', { class: 'sc-axis-line', x1: M.l, y1: sy(0), x2: sx(100), y2: sy(0) }));
+    svg.appendChild(el('line', { class: 'sc-axis-line', x1: M.l, y1: M.t, x2: M.l, y2: sy(0) }));
+    [0, 25, 50, 75, 100].forEach(v => {
+      const tx = el('text', { class: 'sc-axis-txt', x: sx(v), y: sy(0) + 16, 'text-anchor': 'middle' }, v);
+      svg.appendChild(tx);
+      const ty = el('text', { class: 'sc-axis-txt', x: M.l - 8, y: sy(v) + 3, 'text-anchor': 'end' }, v);
+      svg.appendChild(ty);
+    });
+
+    // as-labels
+    svg.appendChild(el('text', { class: 'sc-axis-label', x: M.l + PW / 2, y: VB.h - 8, 'text-anchor': 'middle' }, '% geponste oppervlakte →'));
+    const yl = el('text', { class: 'sc-axis-label', x: 14, y: M.t + PH / 2, 'text-anchor': 'middle', transform: `rotate(-90 14 ${M.t + PH / 2})` }, '% afgenomen planvoorraad →');
+    svg.appendChild(yl);
+
+    // kwadrant-notities
+    svg.appendChild(el('text', { class: 'sc-quad-note green', x: sx(100) - 8, y: M.t + 16, 'text-anchor': 'end' }, 'koplopers op beide'));
+    svg.appendChild(el('text', { class: 'sc-quad-note gray', x: M.l + 8, y: sy(0) - 8, 'text-anchor': 'start' }, 'nog te doen'));
+
+    // punten
+    GEM.forEach(g => {
+      const c = el('circle', {
+        class: 'sc-pt ' + cls(g.score),
+        cx: sx(g.pct), cy: sy(g.pctAf), r: 6,
+        'data-code': g.code,
+      });
+      c.addEventListener('mousemove', e => showTip(e, g));
+      c.addEventListener('mouseenter', () => highlightRow(g.code, true));
+      c.addEventListener('mouseleave', () => { hideTip(); highlightRow(g.code, false); });
+      svg.appendChild(c);
+    });
+  }
+
+  // ---------- Scatter tooltip ----------
+  const tip = document.getElementById('scTip');
+  function showTip(e, g) {
+    tip.innerHTML =
+      '<div class="n">' + g.naam + '</div>' +
+      '<div class="r"><span>% geponst</span><b>' + nl1(g.pct) + '%</b></div>' +
+      '<div class="r"><span>% afgenomen</span><b>' + nl1(g.pctAf) + '%</b></div>' +
+      '<div class="r"><span>Combinatie</span><b>' + g.score + '</b></div>';
+    tip.hidden = false;
+    const pad = 14;
+    let x = e.clientX + pad, y = e.clientY + pad;
+    const r = tip.getBoundingClientRect();
+    if (x + r.width > innerWidth - 8) x = e.clientX - r.width - pad;
+    if (y + r.height > innerHeight - 8) y = e.clientY - r.height - pad;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  }
+  function hideTip() { tip.hidden = true; }
+
+  function highlightRow(code, on) {
+    const row = tbody.querySelector('tr[data-code="' + code + '"]');
+    if (row) row.style.background = on ? 'var(--bg-sunk)' : '';
+    const pt = svg.querySelector('.sc-pt[data-code="' + code + '"]');
+    if (pt) pt.classList.toggle('hot', on);
+  }
+
+  // ---------- Tabel ----------
+  const tbody = document.getElementById('tbody');
+  const table = document.getElementById('table');
+  const noResults = document.getElementById('noResults');
+  const tbCount = document.getElementById('tbCount');
+  let sortKey = 'score', sortDir = -1, query = '';
+
+  function compare(a, b) {
+    let av, bv;
+    if (sortKey === 'naam') { av = a.naam; bv = b.naam; return av.localeCompare(bv, 'nl') * sortDir; }
+    if (sortKey === 'rank') { av = a.score; bv = b.score; return (av - bv) * sortDir; }
+    av = a[sortKey]; bv = b[sortKey];
+    return (av - bv) * sortDir;
+  }
+
+  function render() {
+    const q = query.trim().toLowerCase();
+    let rows = GEM.slice();
+    // rang bepalen op score (altijd, onafhankelijk van sortering)
+    const ranked = GEM.slice().sort((a, b) => b.score - a.score);
+    const rankMap = new Map(ranked.map((g, i) => [g.code, i + 1]));
+
+    rows.sort(compare);
+    if (q) rows = rows.filter(g => g.naam.toLowerCase().includes(q) || g.provincie.toLowerCase().includes(q));
+
+    tbody.innerHTML = '';
+    rows.forEach(g => {
+      const rank = rankMap.get(g.code);
+      const skew = Math.abs(g.pct - g.pctAf);
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-code', g.code);
+      tr.innerHTML =
+        '<td class="c-rank num' + (rank <= 3 ? ' top' : '') + '">' + rank + '</td>' +
+        '<td class="c-gem">' +
+          '<div class="nm">' + g.naam + '<span class="code">' + g.code + '</span></div>' +
+          '<div class="pv">' + g.provincie + '</div>' +
+        '</td>' +
+        '<td class="num"><div class="metric"><div class="v">' + nl1(g.pct) + '<span class="u">%</span></div>' +
+          '<div class="track green"><i style="width:' + g.pct + '%"></i></div></div></td>' +
+        '<td class="num"><div class="metric"><div class="v">' + nl1(g.pctAf) + '<span class="u">%</span></div>' +
+          '<div class="track yellow"><i style="width:' + g.pctAf + '%"></i></div></div></td>' +
+        '<td class="score-cell num"><span class="score-pill ' + scoreCls(g.score) + '">' + g.score +
+          (skew >= 24 ? '</span><span class="skew" title="Scheef: groot verschil tussen geponst en afgenomen (' + skew + ' pp)">!</span>' : '</span>') +
+        '</td>' +
+        '<td class="c-mono num ext">' + nlInt(g.plansNu) + '</td>' +
+        '<td class="c-mono num ext">' + nlInt(g.verdwenen) + '</td>' +
+        '<td class="c-mono num ext faint">' + nl1(g.absKm2) + ' km²</td>';
+
+      tr.addEventListener('mouseenter', () => {
+        const pt = svg.querySelector('.sc-pt[data-code="' + g.code + '"]');
+        if (pt) pt.classList.add('hot');
+      });
+      tr.addEventListener('mouseleave', () => {
+        const pt = svg.querySelector('.sc-pt[data-code="' + g.code + '"]');
+        if (pt) pt.classList.remove('hot');
+      });
+      tbody.appendChild(tr);
+    });
+
+    noResults.hidden = rows.length > 0;
+    if (rows.length === 0 && query) noResults.textContent = 'Geen gemeenten gevonden.';
+    tbCount.textContent = rows.length + (rows.length === 1 ? ' gemeente' : ' gemeenten');
+    updateArrows();
+  }
+
+  function updateArrows() {
+    table.querySelectorAll('th.sortable').forEach(th => {
+      const active = th.dataset.key === sortKey;
+      th.classList.toggle('sorted', active);
+      const arr = th.querySelector('.arrow');
+      if (arr) arr.textContent = sortDir === -1 ? '▾' : '▴';
+    });
+  }
+
+  // sorteer-koppen
+  table.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (key === sortKey) { sortDir *= -1; }
+      else {
+        sortKey = key;
+        // tekst oplopend (A→Z), getallen aflopend als default
+        sortDir = key === 'naam' ? 1 : -1;
+      }
+      render();
+    });
+  });
+
+  // uitgebreide kolommen
+  document.getElementById('extToggle').addEventListener('change', e => {
+    table.classList.toggle('show-ext', e.target.checked);
+  });
+
+  // zoekveld → filtert tabel live
+  document.getElementById('search').addEventListener('input', e => {
+    query = e.target.value;
+    render();
+  });
+
+  // ---------- Weergave-switch (tabel / kwadrant), standaard tabel ----------
+  const heroSection = document.getElementById('heroSection');
+  const tableSection = document.getElementById('tableSection');
+  const vsBtns = document.querySelectorAll('.vs-btn');
+  const VS_KEY = 'combinatie-weergave';
+  let scatterBuilt = false;
+
+  function setView(view) {
+    const isTabel = view !== 'kwadrant';
+    tableSection.hidden = !isTabel;
+    heroSection.hidden = isTabel;
+    vsBtns.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    if (!isTabel && !scatterBuilt) { buildScatter(); scatterBuilt = true; }
+    try { localStorage.setItem(VS_KEY, view); } catch (e) {}
+  }
+
+  vsBtns.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
+  // ---------- Init ----------
+  async function init() {
+    try {
+      GEM = await loadGEM();
+    } catch (err) {
+      noResults.hidden = false;
+      noResults.textContent = 'Kon de cijfers niet laden (' + err.message + ').';
+      tbCount.textContent = '—';
+      return;
+    }
+    computeKpis();
+    render();
+
+    let initialView = 'tabel';
+    try { initialView = localStorage.getItem(VS_KEY) || 'tabel'; } catch (e) {}
+    setView(initialView);
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>

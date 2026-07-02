@@ -1,0 +1,12 @@
+# Bestanden die NOOIT naar Cloudflare Pages geüpload mogen worden.
+# Primaire garantie is deploy.sh (deployt vanuit een schone map); dit is een
+# tweede vangnet voor het geval iemand toch `wrangler pages deploy .` draait.
+.env
+.env.*
+.git
+.gitignore
+.wrangler
+node_modules
+deploy.sh
+*.log
+.DS_Store
