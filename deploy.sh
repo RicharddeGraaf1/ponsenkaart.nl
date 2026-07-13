@@ -20,6 +20,10 @@ trap 'rm -rf "$STAGE"' EXIT
 shopt -s nullglob
 for item in *; do
   [ "$item" = "deploy.sh" ] && continue
+  # CLAUDE.md is een interne doc die de tokennaam (CLOUDFLARE_API_TOKEN)
+  # letterlijk documenteert — niet publiceren, en het triggert anders de
+  # secret-grep hieronder als false positive.
+  [ "$item" = "CLAUDE.md" ] && continue
   cp -r "$item" "$STAGE"/
 done
 

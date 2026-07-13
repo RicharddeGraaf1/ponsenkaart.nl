@@ -4,7 +4,10 @@
 (function () {
   'use strict';
 
-  const TODAY = new Date(2026, 4, 18); // 18 mei 2026 (peildatum demo)
+  // Peildatum = vandaag. De pons-data komt live uit de OCD-API bij elke
+  // paginalading, dus "Data bijgewerkt" en de 2032-telling horen mee te lopen
+  // met de echte datum i.p.v. een bevroren hardcode (stond op 18 mei 2026).
+  const TODAY = new Date();
   const START = new Date(2024, 0, 1);
   const DEADLINE = new Date(2032, 0, 1);
 
