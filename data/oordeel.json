@@ -1,0 +1,2756 @@
+{
+ "lens": "transitie",
+ "bron": "ponsenkaart.nl",
+ "peildatum": "2026-08-04",
+ "dekking": {
+  "getoetst": 342,
+  "totaal": 342,
+  "zin": "342 gemeenten; score = helft geponst grondgebied, helft afgenomen planvoorraad",
+  "niet_getoetst": []
+ },
+ "geldt_voor": [
+  "bronhouders"
+ ],
+ "label_weggelaten": "geen goed/matig/zwak op deze lens: de overgang loopt tot 2032 en is landelijk nauwelijks begonnen, dus een laag cijfer betekent hier 'nog niet begonnen', niet 'slecht'",
+ "nvt_buiten_index": "deze lens meet alleen gemeenten",
+ "bronhouders": {
+  "gm1680": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 142 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1680",
+   "nvt_reden": null
+  },
+  "gm0358": {
+   "cijfer": 11,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 20 van 89 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0358",
+   "nvt_reden": null
+  },
+  "gm0197": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 62 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0197",
+   "nvt_reden": null
+  },
+  "gm0059": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 77 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0059",
+   "nvt_reden": null
+  },
+  "gm0482": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 37 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0482",
+   "nvt_reden": null
+  },
+  "gm0613": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0613",
+   "nvt_reden": null
+  },
+  "gm0361": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 125 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0361",
+   "nvt_reden": null
+  },
+  "gm0141": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 189 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0141",
+   "nvt_reden": null
+  },
+  "gm0034": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 130 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0034",
+   "nvt_reden": null
+  },
+  "gm0484": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 164 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0484",
+   "nvt_reden": null
+  },
+  "gm1723": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 147 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1723",
+   "nvt_reden": null
+  },
+  "gm1959": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 103 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1959",
+   "nvt_reden": null
+  },
+  "gm0060": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 39 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0060",
+   "nvt_reden": null
+  },
+  "gm0307": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "3% van het grondgebied geponst · 1 van 116 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0307",
+   "nvt_reden": null
+  },
+  "gm0362": {
+   "cijfer": 9,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 16 van 94 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0362",
+   "nvt_reden": null
+  },
+  "gm0363": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 10 van 658 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0363",
+   "nvt_reden": null
+  },
+  "gm0200": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 409 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0200",
+   "nvt_reden": null
+  },
+  "gm0202": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 6 van 135 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0202",
+   "nvt_reden": null
+  },
+  "gm0106": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 106 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0106",
+   "nvt_reden": null
+  },
+  "gm0743": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0743",
+   "nvt_reden": null
+  },
+  "gm0744": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 86 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0744",
+   "nvt_reden": null
+  },
+  "gm0308": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 55 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0308",
+   "nvt_reden": null
+  },
+  "gm0489": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0489",
+   "nvt_reden": null
+  },
+  "gm0203": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 35 van 466 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0203",
+   "nvt_reden": null
+  },
+  "gm0888": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 71 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0888",
+   "nvt_reden": null
+  },
+  "gm1954": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 20 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1954",
+   "nvt_reden": null
+  },
+  "gm0889": {
+   "cijfer": 14,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 10 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0889",
+   "nvt_reden": null
+  },
+  "gm1724": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 211 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1724",
+   "nvt_reden": null
+  },
+  "gm1945": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 92 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1945",
+   "nvt_reden": null
+  },
+  "gm0893": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 95 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0893",
+   "nvt_reden": null
+  },
+  "gm0373": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 128 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0373",
+   "nvt_reden": null
+  },
+  "gm0748": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 120 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0748",
+   "nvt_reden": null
+  },
+  "gm1859": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 220 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1859",
+   "nvt_reden": null
+  },
+  "gm1721": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 254 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1721",
+   "nvt_reden": null
+  },
+  "gm0753": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 130 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0753",
+   "nvt_reden": null
+  },
+  "gm0209": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 209 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0209",
+   "nvt_reden": null
+  },
+  "gm0375": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 16 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0375",
+   "nvt_reden": null
+  },
+  "gm1728": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 117 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1728",
+   "nvt_reden": null
+  },
+  "gm0376": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 16 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0376",
+   "nvt_reden": null
+  },
+  "gm0377": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 32 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0377",
+   "nvt_reden": null
+  },
+  "gm1901": {
+   "cijfer": 8,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 28 van 178 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1901",
+   "nvt_reden": null
+  },
+  "gm0755": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 62 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0755",
+   "nvt_reden": null
+  },
+  "gm1681": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 12 van 112 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1681",
+   "nvt_reden": null
+  },
+  "gm0147": {
+   "cijfer": 29,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 63 van 107 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0147",
+   "nvt_reden": null
+  },
+  "gm0654": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 117 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0654",
+   "nvt_reden": null
+  },
+  "gm0757": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 123 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0757",
+   "nvt_reden": null
+  },
+  "gm0758": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 323 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0758",
+   "nvt_reden": null
+  },
+  "gm1876": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 55 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1876",
+   "nvt_reden": null
+  },
+  "gm0213": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 139 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0213",
+   "nvt_reden": null
+  },
+  "gm0899": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 36 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0899",
+   "nvt_reden": null
+  },
+  "gm0312": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 55 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0312",
+   "nvt_reden": null
+  },
+  "gm0313": {
+   "cijfer": 18,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 15 van 41 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0313",
+   "nvt_reden": null
+  },
+  "gm0214": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 145 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0214",
+   "nvt_reden": null
+  },
+  "gm0502": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 42 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0502",
+   "nvt_reden": null
+  },
+  "gm0383": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 123 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0383",
+   "nvt_reden": null
+  },
+  "gm0109": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 85 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0109",
+   "nvt_reden": null
+  },
+  "gm1706": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 141 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1706",
+   "nvt_reden": null
+  },
+  "gm0216": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0216",
+   "nvt_reden": null
+  },
+  "gm0148": {
+   "cijfer": 14,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 20 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0148",
+   "nvt_reden": null
+  },
+  "gm1891": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 97 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1891",
+   "nvt_reden": null
+  },
+  "gm0310": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 106 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0310",
+   "nvt_reden": null
+  },
+  "gm1940": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 170 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1940",
+   "nvt_reden": null
+  },
+  "gm0503": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 87 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0503",
+   "nvt_reden": null
+  },
+  "gm0400": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 56 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0400",
+   "nvt_reden": null
+  },
+  "gm0736": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 82 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0736",
+   "nvt_reden": null
+  },
+  "gm0762": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 177 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0762",
+   "nvt_reden": null
+  },
+  "gm0150": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 248 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0150",
+   "nvt_reden": null
+  },
+  "gm1690": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 120 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1690",
+   "nvt_reden": null
+  },
+  "gm0384": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 18 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0384",
+   "nvt_reden": null
+  },
+  "gm1980": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 26 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1980",
+   "nvt_reden": null
+  },
+  "gm1774": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 9 van 407 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1774",
+   "nvt_reden": null
+  },
+  "gm0221": {
+   "cijfer": 11,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 11 van 48 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0221",
+   "nvt_reden": null
+  },
+  "gm0222": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "1% van het grondgebied geponst · 1 van 59 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0222",
+   "nvt_reden": null
+  },
+  "gm0766": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 80 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0766",
+   "nvt_reden": null
+  },
+  "gm0505": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 10 van 123 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0505",
+   "nvt_reden": null
+  },
+  "gm0498": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0498",
+   "nvt_reden": null
+  },
+  "gm1719": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 156 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1719",
+   "nvt_reden": null
+  },
+  "gm0303": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 97 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0303",
+   "nvt_reden": null
+  },
+  "gm0225": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 43 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0225",
+   "nvt_reden": null
+  },
+  "gm0226": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 82 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0226",
+   "nvt_reden": null
+  },
+  "gm1711": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 111 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1711",
+   "nvt_reden": null
+  },
+  "gm0385": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0385",
+   "nvt_reden": null
+  },
+  "gm0228": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 427 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0228",
+   "nvt_reden": null
+  },
+  "gm0317": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 39 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0317",
+   "nvt_reden": null
+  },
+  "gm1979": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 41 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1979",
+   "nvt_reden": null
+  },
+  "gm0770": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 159 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0770",
+   "nvt_reden": null
+  },
+  "gm1903": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 89 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1903",
+   "nvt_reden": null
+  },
+  "gm0772": {
+   "cijfer": 14,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "10% van het grondgebied geponst · 54 van 295 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0772",
+   "nvt_reden": null
+  },
+  "gm0230": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 80 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0230",
+   "nvt_reden": null
+  },
+  "gm0114": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 322 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0114",
+   "nvt_reden": null
+  },
+  "gm0388": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 30 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0388",
+   "nvt_reden": null
+  },
+  "gm0153": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "2% van het grondgebied geponst · 3 van 207 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0153",
+   "nvt_reden": null
+  },
+  "gm0232": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 10 van 131 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0232",
+   "nvt_reden": null
+  },
+  "gm0233": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 136 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0233",
+   "nvt_reden": null
+  },
+  "gm0777": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 11 van 116 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0777",
+   "nvt_reden": null
+  },
+  "gm0779": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 72 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0779",
+   "nvt_reden": null
+  },
+  "gm1771": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 60 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1771",
+   "nvt_reden": null
+  },
+  "gm1652": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 189 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1652",
+   "nvt_reden": null
+  },
+  "gm0907": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 100 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0907",
+   "nvt_reden": null
+  },
+  "gm0784": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 129 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0784",
+   "nvt_reden": null
+  },
+  "gm1924": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 215 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1924",
+   "nvt_reden": null
+  },
+  "gm0664": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 164 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0664",
+   "nvt_reden": null
+  },
+  "gm0785": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 113 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0785",
+   "nvt_reden": null
+  },
+  "gm1942": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 56 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1942",
+   "nvt_reden": null
+  },
+  "gm0512": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 73 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0512",
+   "nvt_reden": null
+  },
+  "gm0513": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 89 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0513",
+   "nvt_reden": null
+  },
+  "gm0014": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 178 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0014",
+   "nvt_reden": null
+  },
+  "gm1729": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 66 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1729",
+   "nvt_reden": null
+  },
+  "gm0158": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 143 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0158",
+   "nvt_reden": null
+  },
+  "gm0392": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "6% van het grondgebied geponst · 3 van 167 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0392",
+   "nvt_reden": null
+  },
+  "gm0394": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 187 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0394",
+   "nvt_reden": null
+  },
+  "gm1655": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 97 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1655",
+   "nvt_reden": null
+  },
+  "gm0160": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 364 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0160",
+   "nvt_reden": null
+  },
+  "gm0243": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 129 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0243",
+   "nvt_reden": null
+  },
+  "gm0523": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0523",
+   "nvt_reden": null
+  },
+  "gm0072": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 37 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0072",
+   "nvt_reden": null
+  },
+  "gm0244": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 48 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0244",
+   "nvt_reden": null
+  },
+  "gm0396": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 39 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0396",
+   "nvt_reden": null
+  },
+  "gm0397": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 23 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0397",
+   "nvt_reden": null
+  },
+  "gm0246": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 125 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0246",
+   "nvt_reden": null
+  },
+  "gm0074": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 145 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0074",
+   "nvt_reden": null
+  },
+  "gm0917": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 120 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0917",
+   "nvt_reden": null
+  },
+  "gm1658": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 55 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1658",
+   "nvt_reden": null
+  },
+  "gm0399": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 51 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0399",
+   "nvt_reden": null
+  },
+  "gm0163": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 17 van 171 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0163",
+   "nvt_reden": null
+  },
+  "gm0794": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 147 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0794",
+   "nvt_reden": null
+  },
+  "gm0531": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 55 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0531",
+   "nvt_reden": null
+  },
+  "gm0164": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 153 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0164",
+   "nvt_reden": null
+  },
+  "gm1966": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 42 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1966",
+   "nvt_reden": null
+  },
+  "gm0252": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 82 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0252",
+   "nvt_reden": null
+  },
+  "gm0797": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 149 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0797",
+   "nvt_reden": null
+  },
+  "gm0534": {
+   "cijfer": 22,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 32 van 72 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0534",
+   "nvt_reden": null
+  },
+  "gm0798": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 179 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0798",
+   "nvt_reden": null
+  },
+  "gm0402": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 9 van 92 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0402",
+   "nvt_reden": null
+  },
+  "gm1963": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 147 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1963",
+   "nvt_reden": null
+  },
+  "gm1735": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 15 van 179 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1735",
+   "nvt_reden": null
+  },
+  "gm1911": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 250 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1911",
+   "nvt_reden": null
+  },
+  "gm0118": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 190 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0118",
+   "nvt_reden": null
+  },
+  "gm0405": {
+   "cijfer": 7,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 9 van 69 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0405",
+   "nvt_reden": null
+  },
+  "gm1507": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 366 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1507",
+   "nvt_reden": null
+  },
+  "gm0321": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 77 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0321",
+   "nvt_reden": null
+  },
+  "gm0406": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 30 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0406",
+   "nvt_reden": null
+  },
+  "gm0677": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 105 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0677",
+   "nvt_reden": null
+  },
+  "gm0353": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0353",
+   "nvt_reden": null
+  },
+  "gm1884": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 220 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1884",
+   "nvt_reden": null
+  },
+  "gm0166": {
+   "cijfer": 13,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 30 van 114 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0166",
+   "nvt_reden": null
+  },
+  "gm0678": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 65 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0678",
+   "nvt_reden": null
+  },
+  "gm0537": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 148 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0537",
+   "nvt_reden": null
+  },
+  "gm0928": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 38 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0928",
+   "nvt_reden": null
+  },
+  "gm1598": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 90 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1598",
+   "nvt_reden": null
+  },
+  "gm0542": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 31 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0542",
+   "nvt_reden": null
+  },
+  "gm1931": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 140 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1931",
+   "nvt_reden": null
+  },
+  "gm1659": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 129 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1659",
+   "nvt_reden": null
+  },
+  "gm0882": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0882",
+   "nvt_reden": null
+  },
+  "gm0415": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 21 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0415",
+   "nvt_reden": null
+  },
+  "gm1982": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 137 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1982",
+   "nvt_reden": null
+  },
+  "gm1621": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 132 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1621",
+   "nvt_reden": null
+  },
+  "gm0417": {
+   "cijfer": 8,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 26 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0417",
+   "nvt_reden": null
+  },
+  "gm0080": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 137 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0080",
+   "nvt_reden": null
+  },
+  "gm0546": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 102 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0546",
+   "nvt_reden": null
+  },
+  "gm0547": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 49 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0547",
+   "nvt_reden": null
+  },
+  "gm1916": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1916",
+   "nvt_reden": null
+  },
+  "gm0995": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "7% van het grondgebied geponst · 1 van 82 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0995",
+   "nvt_reden": null
+  },
+  "gm1640": {
+   "cijfer": 25,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 81 van 164 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1640",
+   "nvt_reden": null
+  },
+  "gm0327": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 111 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0327",
+   "nvt_reden": null
+  },
+  "gm1705": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 191 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1705",
+   "nvt_reden": null
+  },
+  "gm0553": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 81 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0553",
+   "nvt_reden": null
+  },
+  "gm0262": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 367 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0262",
+   "nvt_reden": null
+  },
+  "gm0809": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 125 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0809",
+   "nvt_reden": null
+  },
+  "gm0331": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 91 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0331",
+   "nvt_reden": null
+  },
+  "gm0168": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 124 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0168",
+   "nvt_reden": null
+  },
+  "gm0263": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 144 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0263",
+   "nvt_reden": null
+  },
+  "gm1641": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 152 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1641",
+   "nvt_reden": null
+  },
+  "gm1991": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 85 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1991",
+   "nvt_reden": null
+  },
+  "gm0556": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0556",
+   "nvt_reden": null
+  },
+  "gm0935": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 137 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0935",
+   "nvt_reden": null
+  },
+  "gm0420": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 79 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0420",
+   "nvt_reden": null
+  },
+  "gm0938": {
+   "cijfer": 23,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 14 van 31 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0938",
+   "nvt_reden": null
+  },
+  "gm1948": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 235 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1948",
+   "nvt_reden": null
+  },
+  "gm0119": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "3% van het grondgebied geponst · 0 van 79 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0119",
+   "nvt_reden": null
+  },
+  "gm0687": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0687",
+   "nvt_reden": null
+  },
+  "gm1842": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 85 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1842",
+   "nvt_reden": null
+  },
+  "gm1731": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 185 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1731",
+   "nvt_reden": null
+  },
+  "gm1952": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 61 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1952",
+   "nvt_reden": null
+  },
+  "gm1709": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 122 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1709",
+   "nvt_reden": null
+  },
+  "gm1978": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 172 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1978",
+   "nvt_reden": null
+  },
+  "gm1955": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 186 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1955",
+   "nvt_reden": null
+  },
+  "gm0335": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 64 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0335",
+   "nvt_reden": null
+  },
+  "gm0944": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 48 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0944",
+   "nvt_reden": null
+  },
+  "gm1740": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "7% van het grondgebied geponst · 2 van 162 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1740",
+   "nvt_reden": null
+  },
+  "gm0946": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 123 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0946",
+   "nvt_reden": null
+  },
+  "gm0356": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 47 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0356",
+   "nvt_reden": null
+  },
+  "gm0569": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 91 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0569",
+   "nvt_reden": null
+  },
+  "gm0267": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 166 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0267",
+   "nvt_reden": null
+  },
+  "gm0268": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 35 van 320 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0268",
+   "nvt_reden": null
+  },
+  "gm1930": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1930",
+   "nvt_reden": null
+  },
+  "gm1970": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 68 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1970",
+   "nvt_reden": null
+  },
+  "gm1695": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 43 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1695",
+   "nvt_reden": null
+  },
+  "gm1699": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 85 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1699",
+   "nvt_reden": null
+  },
+  "gm0171": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 7 van 198 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0171",
+   "nvt_reden": null
+  },
+  "gm0575": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 95 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0575",
+   "nvt_reden": null
+  },
+  "gm0820": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 99 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0820",
+   "nvt_reden": null
+  },
+  "gm0302": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 151 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0302",
+   "nvt_reden": null
+  },
+  "gm0579": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 44 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0579",
+   "nvt_reden": null
+  },
+  "gm0823": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 171 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0823",
+   "nvt_reden": null
+  },
+  "gm0824": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 135 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0824",
+   "nvt_reden": null
+  },
+  "gm1895": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1895",
+   "nvt_reden": null
+  },
+  "gm0269": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 179 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0269",
+   "nvt_reden": null
+  },
+  "gm0173": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 119 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0173",
+   "nvt_reden": null
+  },
+  "gm1773": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 155 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1773",
+   "nvt_reden": null
+  },
+  "gm0175": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 157 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0175",
+   "nvt_reden": null
+  },
+  "gm0826": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 109 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0826",
+   "nvt_reden": null
+  },
+  "gm1586": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 160 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1586",
+   "nvt_reden": null
+  },
+  "gm0085": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 100 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0085",
+   "nvt_reden": null
+  },
+  "gm0431": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 26 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0431",
+   "nvt_reden": null
+  },
+  "gm0432": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 31 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0432",
+   "nvt_reden": null
+  },
+  "gm0086": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0086",
+   "nvt_reden": null
+  },
+  "gm0828": {
+   "cijfer": 17,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 88 van 254 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0828",
+   "nvt_reden": null
+  },
+  "gm1509": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 230 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1509",
+   "nvt_reden": null
+  },
+  "gm0437": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 49 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0437",
+   "nvt_reden": null
+  },
+  "gm0589": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0589",
+   "nvt_reden": null
+  },
+  "gm1734": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 7 van 256 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1734",
+   "nvt_reden": null
+  },
+  "gm0590": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 40 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0590",
+   "nvt_reden": null
+  },
+  "gm1894": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 272 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1894",
+   "nvt_reden": null
+  },
+  "gm0765": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 36 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0765",
+   "nvt_reden": null
+  },
+  "gm1926": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "1% van het grondgebied geponst · 6 van 103 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1926",
+   "nvt_reden": null
+  },
+  "gm0439": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "1% van het grondgebied geponst · 1 van 91 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0439",
+   "nvt_reden": null
+  },
+  "gm0273": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 124 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0273",
+   "nvt_reden": null
+  },
+  "gm0177": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 184 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0177",
+   "nvt_reden": null
+  },
+  "gm0703": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 83 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0703",
+   "nvt_reden": null
+  },
+  "gm0274": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 61 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0274",
+   "nvt_reden": null
+  },
+  "gm0339": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0339",
+   "nvt_reden": null
+  },
+  "gm1667": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 90 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1667",
+   "nvt_reden": null
+  },
+  "gm0275": {
+   "cijfer": 8,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 25 van 153 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0275",
+   "nvt_reden": null
+  },
+  "gm0340": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 206 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0340",
+   "nvt_reden": null
+  },
+  "gm0597": {
+   "cijfer": 10,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 17 van 84 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0597",
+   "nvt_reden": null
+  },
+  "gm1742": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 202 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1742",
+   "nvt_reden": null
+  },
+  "gm0603": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0603",
+   "nvt_reden": null
+  },
+  "gm1669": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 77 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1669",
+   "nvt_reden": null
+  },
+  "gm0957": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 100 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0957",
+   "nvt_reden": null
+  },
+  "gm1674": {
+   "cijfer": 9,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 23 van 123 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1674",
+   "nvt_reden": null
+  },
+  "gm0599": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 26 van 336 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0599",
+   "nvt_reden": null
+  },
+  "gm0277": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 7 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0277",
+   "nvt_reden": null
+  },
+  "gm0840": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 177 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0840",
+   "nvt_reden": null
+  },
+  "gm0441": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 208 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0441",
+   "nvt_reden": null
+  },
+  "gm0279": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 59 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0279",
+   "nvt_reden": null
+  },
+  "gm0606": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0606",
+   "nvt_reden": null
+  },
+  "gm0088": {
+   "cijfer": 10,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 10 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0088",
+   "nvt_reden": null
+  },
+  "gm1676": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 98 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1676",
+   "nvt_reden": null
+  },
+  "gm0518": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 206 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0518",
+   "nvt_reden": null
+  },
+  "gm0796": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 254 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0796",
+   "nvt_reden": null
+  },
+  "gm0965": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 20 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0965",
+   "nvt_reden": null
+  },
+  "gm0845": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 86 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0845",
+   "nvt_reden": null
+  },
+  "gm1883": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 147 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1883",
+   "nvt_reden": null
+  },
+  "gm0610": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 42 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0610",
+   "nvt_reden": null
+  },
+  "gm1714": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 148 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1714",
+   "nvt_reden": null
+  },
+  "gm0090": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 137 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0090",
+   "nvt_reden": null
+  },
+  "gm0342": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 122 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0342",
+   "nvt_reden": null
+  },
+  "gm0847": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 215 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0847",
+   "nvt_reden": null
+  },
+  "gm0848": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 93 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0848",
+   "nvt_reden": null
+  },
+  "gm0037": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0037",
+   "nvt_reden": null
+  },
+  "gm0180": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "1% van het grondgebied geponst · 0 van 129 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0180",
+   "nvt_reden": null
+  },
+  "gm0532": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 34 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0532",
+   "nvt_reden": null
+  },
+  "gm0851": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0851",
+   "nvt_reden": null
+  },
+  "gm1708": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 206 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1708",
+   "nvt_reden": null
+  },
+  "gm0971": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0971",
+   "nvt_reden": null
+  },
+  "gm1904": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 140 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1904",
+   "nvt_reden": null
+  },
+  "gm1900": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 20 van 212 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1900",
+   "nvt_reden": null
+  },
+  "gm0715": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 162 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0715",
+   "nvt_reden": null
+  },
+  "gm0093": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 61 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0093",
+   "nvt_reden": null
+  },
+  "gm0448": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 63 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0448",
+   "nvt_reden": null
+  },
+  "gm1525": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 118 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1525",
+   "nvt_reden": null
+  },
+  "gm0716": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 68 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0716",
+   "nvt_reden": null
+  },
+  "gm0281": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 60 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0281",
+   "nvt_reden": null
+  },
+  "gm0855": {
+   "cijfer": 4,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 38 van 432 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0855",
+   "nvt_reden": null
+  },
+  "gm0183": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 169 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0183",
+   "nvt_reden": null
+  },
+  "gm1700": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 264 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1700",
+   "nvt_reden": null
+  },
+  "gm1730": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 89 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1730",
+   "nvt_reden": null
+  },
+  "gm0737": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 110 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0737",
+   "nvt_reden": null
+  },
+  "gm0450": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 40 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0450",
+   "nvt_reden": null
+  },
+  "gm0451": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 107 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0451",
+   "nvt_reden": null
+  },
+  "gm0184": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0184",
+   "nvt_reden": null
+  },
+  "gm0344": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 289 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0344",
+   "nvt_reden": null
+  },
+  "gm1581": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 159 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1581",
+   "nvt_reden": null
+  },
+  "gm0981": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 48 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0981",
+   "nvt_reden": null
+  },
+  "gm0994": {
+   "cijfer": 8,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 6 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0994",
+   "nvt_reden": null
+  },
+  "gm0858": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 6 van 106 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0858",
+   "nvt_reden": null
+  },
+  "gm0047": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 42 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0047",
+   "nvt_reden": null
+  },
+  "gm0345": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 96 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0345",
+   "nvt_reden": null
+  },
+  "gm0717": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "4% van het grondgebied geponst · 0 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0717",
+   "nvt_reden": null
+  },
+  "gm0861": {
+   "cijfer": 6,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 22 van 170 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0861",
+   "nvt_reden": null
+  },
+  "gm0453": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 8 van 80 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0453",
+   "nvt_reden": null
+  },
+  "gm0983": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 265 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0983",
+   "nvt_reden": null
+  },
+  "gm0984": {
+   "cijfer": 6,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 34 van 289 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0984",
+   "nvt_reden": null
+  },
+  "gm1961": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 84 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1961",
+   "nvt_reden": null
+  },
+  "gm0622": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 6 van 97 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0622",
+   "nvt_reden": null
+  },
+  "gm0096": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 23 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0096",
+   "nvt_reden": null
+  },
+  "gm0718": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 63 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0718",
+   "nvt_reden": null
+  },
+  "gm0986": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 39 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0986",
+   "nvt_reden": null
+  },
+  "gm1992": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 17 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1992",
+   "nvt_reden": null
+  },
+  "gm0626": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 27 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0626",
+   "nvt_reden": null
+  },
+  "gm0285": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 198 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0285",
+   "nvt_reden": null
+  },
+  "gm0865": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 100 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0865",
+   "nvt_reden": null
+  },
+  "gm1949": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1949",
+   "nvt_reden": null
+  },
+  "gm0866": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 54 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0866",
+   "nvt_reden": null
+  },
+  "gm0867": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 112 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0867",
+   "nvt_reden": null
+  },
+  "gm0627": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 119 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0627",
+   "nvt_reden": null
+  },
+  "gm0289": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 83 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0289",
+   "nvt_reden": null
+  },
+  "gm0629": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 47 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0629",
+   "nvt_reden": null
+  },
+  "gm0852": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 52 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0852",
+   "nvt_reden": null
+  },
+  "gm0988": {
+   "cijfer": 20,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 83 van 210 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0988",
+   "nvt_reden": null
+  },
+  "gm1960": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 95 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1960",
+   "nvt_reden": null
+  },
+  "gm1969": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 70 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1969",
+   "nvt_reden": null
+  },
+  "gm1701": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 131 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1701",
+   "nvt_reden": null
+  },
+  "gm0293": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 31 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0293",
+   "nvt_reden": null
+  },
+  "gm1950": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 45 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1950",
+   "nvt_reden": null
+  },
+  "gm1783": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 9 van 200 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1783",
+   "nvt_reden": null
+  },
+  "gm0668": {
+   "cijfer": 13,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 32 van 127 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0668",
+   "nvt_reden": null
+  },
+  "gm0098": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 74 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0098",
+   "nvt_reden": null
+  },
+  "gm0189": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 259 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0189",
+   "nvt_reden": null
+  },
+  "gm0296": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 229 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0296",
+   "nvt_reden": null
+  },
+  "gm1696": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 1 van 101 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1696",
+   "nvt_reden": null
+  },
+  "gm0352": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 53 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0352",
+   "nvt_reden": null
+  },
+  "gm0294": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 194 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0294",
+   "nvt_reden": null
+  },
+  "gm0873": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 105 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0873",
+   "nvt_reden": null
+  },
+  "gm0632": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 2 van 119 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0632",
+   "nvt_reden": null
+  },
+  "gm0880": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 41 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0880",
+   "nvt_reden": null
+  },
+  "gm0351": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 96 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0351",
+   "nvt_reden": null
+  },
+  "gm0479": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 127 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0479",
+   "nvt_reden": null
+  },
+  "gm0297": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 141 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0297",
+   "nvt_reden": null
+  },
+  "gm0473": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "1% van het grondgebied geponst · 1 van 23 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0473",
+   "nvt_reden": null
+  },
+  "gm0050": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 40 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0050",
+   "nvt_reden": null
+  },
+  "gm0355": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 85 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0355",
+   "nvt_reden": null
+  },
+  "gm0299": {
+   "cijfer": 3,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 9 van 135 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0299",
+   "nvt_reden": null
+  },
+  "gm0637": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 88 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0637",
+   "nvt_reden": null
+  },
+  "gm0638": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 35 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0638",
+   "nvt_reden": null
+  },
+  "gm1892": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 5 van 162 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1892",
+   "nvt_reden": null
+  },
+  "gm0879": {
+   "cijfer": 1,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 4 van 161 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0879",
+   "nvt_reden": null
+  },
+  "gm0301": {
+   "cijfer": 2,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 3 van 83 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0301",
+   "nvt_reden": null
+  },
+  "gm1896": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 64 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm1896",
+   "nvt_reden": null
+  },
+  "gm0642": {
+   "cijfer": 0,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 0 van 59 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0642",
+   "nvt_reden": null
+  },
+  "gm0193": {
+   "cijfer": 5,
+   "eenheid": "/100",
+   "label": null,
+   "dekking": "0% van het grondgebied geponst · 21 van 200 plannen weggehaald · overgang loopt tot 2032",
+   "link": "https://ponsenkaart.nl/Combinatie?gemeente=gm0193",
+   "nvt_reden": null
+  }
+ },
+ "documenten": {},
+ "nvt_documenten": "ponsenkaart meet per gemeente, niet per document"
+}

@@ -24,6 +24,9 @@ for item in *; do
   # letterlijk documenteert — niet publiceren, en het triggert anders de
   # secret-grep hieronder als false positive.
   [ "$item" = "CLAUDE.md" ] && continue
+  # tools/ zijn generatoren (bv. build_oordeel.py); hun uitvoer hoort wel
+  # publiek, het script zelf niet.
+  [ "$item" = "tools" ] && continue
   cp -r "$item" "$STAGE"/
 done
 

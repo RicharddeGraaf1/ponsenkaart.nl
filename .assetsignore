@@ -8,5 +8,6 @@
 .wrangler
 node_modules
 deploy.sh
+tools
 *.log
 .DS_Store
