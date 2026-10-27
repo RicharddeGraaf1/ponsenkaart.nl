@@ -222,15 +222,6 @@ body.rp { display: block; min-height: 100vh; }
 .c-mono { font-family: var(--mono); font-size: 12px; color: var(--ink); font-variant-numeric: tabular-nums; text-align: right; }
 .c-mono.faint { color: var(--ink-muted); }
 
-/* scheef-vlag: groot verschil tussen de twee meetlatten */
-.skew {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 16px; height: 16px; border-radius: 8px; margin-left: 6px;
-  background: var(--yellow-soft); color: #8a6800;
-  font-family: var(--mono); font-size: 10px; font-weight: 700;
-  cursor: help; vertical-align: middle;
-}
-
 /* "?"-info knop bij score-kop */
 .info {
   display: inline-flex; align-items: center; justify-content: center;
@@ -642,7 +633,6 @@ body.rp { display: block; min-height: 100vh; }
     tbody.innerHTML = '';
     rows.forEach(g => {
       const rank = rankMap.get(g.code);
-      const skew = Math.abs(g.pct - g.pctAf);
       const tr = document.createElement('tr');
       tr.setAttribute('data-code', g.code);
       tr.innerHTML =
@@ -655,9 +645,7 @@ body.rp { display: block; min-height: 100vh; }
           '<div class="track green"><i style="width:' + g.pct + '%"></i></div></div></td>' +
         '<td class="num"><div class="metric"><div class="v">' + nl1(g.pctAf) + '<span class="u">%</span></div>' +
           '<div class="track yellow"><i style="width:' + g.pctAf + '%"></i></div></div></td>' +
-        '<td class="score-cell num"><span class="score-pill ' + scoreCls(g.score) + '">' + g.score +
-          (skew >= 24 ? '</span><span class="skew" title="Scheef: groot verschil tussen geponst en afgenomen (' + skew + ' pp)">!</span>' : '</span>') +
-        '</td>' +
+        '<td class="score-cell num"><span class="score-pill ' + scoreCls(g.score) + '">' + g.score + '</span></td>' +
         '<td class="c-mono num ext">' + nlInt(g.plansNu) + '</td>' +
         '<td class="c-mono num ext">' + nlInt(g.verdwenen) + '</td>' +
         '<td class="c-mono num ext faint">' + nl1(g.absKm2) + ' km²</td>';
