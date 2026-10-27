@@ -232,7 +232,7 @@ body.rp { display: block; min-height: 100vh; }
 }
 .info:hover { color: var(--ink); border-color: var(--ink-faint); }
 .info .pop {
-  display: none; position: absolute; bottom: calc(100% + 8px); right: -8px;
+  display: none; position: absolute; top: calc(100% + 8px); right: -8px;
   width: 232px; text-align: left;
   background: var(--ink-strong); color: var(--bg-card);
   font-size: 11px; font-weight: 400; line-height: 1.5; letter-spacing: 0;
@@ -245,8 +245,8 @@ body.rp { display: block; min-height: 100vh; }
   padding: 1px 5px; border-radius: 3px; font-size: 10px;
 }
 .info .pop::after {
-  content: ""; position: absolute; top: 100%; right: 10px;
-  border: 5px solid transparent; border-top-color: var(--ink-strong);
+  content: ""; position: absolute; bottom: 100%; right: 10px;
+  border: 5px solid transparent; border-bottom-color: var(--ink-strong);
 }
 .info:hover .pop { display: block; }
 
