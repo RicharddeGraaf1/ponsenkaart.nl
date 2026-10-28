@@ -1,4 +1,4 @@
-// Cloudflare Pages Function — server-side proxy naar de OCD-API (api.ponsenkaart.nl).
+// Cloudflare Pages Function — server-side proxy naar de OCD-API (ocd.elconteo.nl).
 //
 // Doel:
 //   1. Cloudflare-edge in het pad → DDoS-bescherming + WAF
@@ -17,9 +17,9 @@
 // Bij data-ververs → Purge Everything en de cache is leeg, eerste user
 // vult 'm vers.
 
-// Het eigen domein, niet het Railway-adres: zo verhuist de proxy mee als
-// api.ponsenkaart.nl naar Hetzner gaat (zie c:/GIT/OCD/docs/railway-naar-hetzner-plan.md).
-const UPSTREAM = 'https://api.ponsenkaart.nl';
+// De eigen naam van de OCD-API, niet het Railway-adres: de OCD-API draait sinds 2026-10-28 op
+// Hetzner (zie c:/GIT/OCD/docs/railway-naar-hetzner-plan.md).
+const UPSTREAM = 'https://ocd.elconteo.nl';
 const ALLOWED_PREFIXES = ['/v1/ponsenkaart', '/v1/planvoorraad', '/health'];
 
 export async function onRequest({ request, env, params }) {
